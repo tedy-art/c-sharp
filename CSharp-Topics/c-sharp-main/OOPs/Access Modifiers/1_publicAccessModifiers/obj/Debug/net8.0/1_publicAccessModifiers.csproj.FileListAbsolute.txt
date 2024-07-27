@@ -1,0 +1,15 @@
+E:\C Sharp\c-sharp\OOPs\Access Modifiers\1_publicAccessModifiers\bin\Debug\net8.0\1_publicAccessModifiers.exe
+E:\C Sharp\c-sharp\OOPs\Access Modifiers\1_publicAccessModifiers\bin\Debug\net8.0\1_publicAccessModifiers.deps.json
+E:\C Sharp\c-sharp\OOPs\Access Modifiers\1_publicAccessModifiers\bin\Debug\net8.0\1_publicAccessModifiers.runtimeconfig.json
+E:\C Sharp\c-sharp\OOPs\Access Modifiers\1_publicAccessModifiers\bin\Debug\net8.0\1_publicAccessModifiers.dll
+E:\C Sharp\c-sharp\OOPs\Access Modifiers\1_publicAccessModifiers\bin\Debug\net8.0\1_publicAccessModifiers.pdb
+E:\C Sharp\c-sharp\OOPs\Access Modifiers\1_publicAccessModifiers\obj\Debug\net8.0\1_publicAccessModifiers.GeneratedMSBuildEditorConfig.editorconfig
+E:\C Sharp\c-sharp\OOPs\Access Modifiers\1_publicAccessModifiers\obj\Debug\net8.0\1_publicAccessModifiers.AssemblyInfoInputs.cache
+E:\C Sharp\c-sharp\OOPs\Access Modifiers\1_publicAccessModifiers\obj\Debug\net8.0\1_publicAccessModifiers.AssemblyInfo.cs
+E:\C Sharp\c-sharp\OOPs\Access Modifiers\1_publicAccessModifiers\obj\Debug\net8.0\1_publicAccessModifiers.csproj.CoreCompileInputs.cache
+E:\C Sharp\c-sharp\OOPs\Access Modifiers\1_publicAccessModifiers\obj\Debug\net8.0\1_publicAccessModifiers.sourcelink.json
+E:\C Sharp\c-sharp\OOPs\Access Modifiers\1_publicAccessModifiers\obj\Debug\net8.0\1_publicAccessModifiers.dll
+E:\C Sharp\c-sharp\OOPs\Access Modifiers\1_publicAccessModifiers\obj\Debug\net8.0\refint\1_publicAccessModifiers.dll
+E:\C Sharp\c-sharp\OOPs\Access Modifiers\1_publicAccessModifiers\obj\Debug\net8.0\1_publicAccessModifiers.pdb
+E:\C Sharp\c-sharp\OOPs\Access Modifiers\1_publicAccessModifiers\obj\Debug\net8.0\1_publicAccessModifiers.genruntimeconfig.cache
+E:\C Sharp\c-sharp\OOPs\Access Modifiers\1_publicAccessModifiers\obj\Debug\net8.0\ref\1_publicAccessModifiers.dll

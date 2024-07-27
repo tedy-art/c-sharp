@@ -1,0 +1,15 @@
+E:\C Sharp\c-sharp\returnValuesInMethods\bin\Debug\net8.0\returnValuesInMethods.exe
+E:\C Sharp\c-sharp\returnValuesInMethods\bin\Debug\net8.0\returnValuesInMethods.deps.json
+E:\C Sharp\c-sharp\returnValuesInMethods\bin\Debug\net8.0\returnValuesInMethods.runtimeconfig.json
+E:\C Sharp\c-sharp\returnValuesInMethods\bin\Debug\net8.0\returnValuesInMethods.dll
+E:\C Sharp\c-sharp\returnValuesInMethods\bin\Debug\net8.0\returnValuesInMethods.pdb
+E:\C Sharp\c-sharp\returnValuesInMethods\obj\Debug\net8.0\returnValuesInMethods.GeneratedMSBuildEditorConfig.editorconfig
+E:\C Sharp\c-sharp\returnValuesInMethods\obj\Debug\net8.0\returnValuesInMethods.AssemblyInfoInputs.cache
+E:\C Sharp\c-sharp\returnValuesInMethods\obj\Debug\net8.0\returnValuesInMethods.AssemblyInfo.cs
+E:\C Sharp\c-sharp\returnValuesInMethods\obj\Debug\net8.0\returnValuesInMethods.csproj.CoreCompileInputs.cache
+E:\C Sharp\c-sharp\returnValuesInMethods\obj\Debug\net8.0\returnValuesInMethods.sourcelink.json
+E:\C Sharp\c-sharp\returnValuesInMethods\obj\Debug\net8.0\returnValuesInMethods.dll
+E:\C Sharp\c-sharp\returnValuesInMethods\obj\Debug\net8.0\refint\returnValuesInMethods.dll
+E:\C Sharp\c-sharp\returnValuesInMethods\obj\Debug\net8.0\returnValuesInMethods.pdb
+E:\C Sharp\c-sharp\returnValuesInMethods\obj\Debug\net8.0\returnValuesInMethods.genruntimeconfig.cache
+E:\C Sharp\c-sharp\returnValuesInMethods\obj\Debug\net8.0\ref\returnValuesInMethods.dll

@@ -1,0 +1,15 @@
+e:\C Sharp\c-sharp\bin\Debug\net8.0\c-sharp.exe
+e:\C Sharp\c-sharp\bin\Debug\net8.0\c-sharp.deps.json
+e:\C Sharp\c-sharp\bin\Debug\net8.0\c-sharp.runtimeconfig.json
+e:\C Sharp\c-sharp\bin\Debug\net8.0\c-sharp.dll
+e:\C Sharp\c-sharp\bin\Debug\net8.0\c-sharp.pdb
+e:\C Sharp\c-sharp\obj\Debug\net8.0\c-sharp.GeneratedMSBuildEditorConfig.editorconfig
+e:\C Sharp\c-sharp\obj\Debug\net8.0\c-sharp.AssemblyInfoInputs.cache
+e:\C Sharp\c-sharp\obj\Debug\net8.0\c-sharp.AssemblyInfo.cs
+e:\C Sharp\c-sharp\obj\Debug\net8.0\c-sharp.csproj.CoreCompileInputs.cache
+e:\C Sharp\c-sharp\obj\Debug\net8.0\c-sharp.sourcelink.json
+e:\C Sharp\c-sharp\obj\Debug\net8.0\c-sharp.dll
+e:\C Sharp\c-sharp\obj\Debug\net8.0\refint\c-sharp.dll
+e:\C Sharp\c-sharp\obj\Debug\net8.0\c-sharp.pdb
+e:\C Sharp\c-sharp\obj\Debug\net8.0\c-sharp.genruntimeconfig.cache
+e:\C Sharp\c-sharp\obj\Debug\net8.0\ref\c-sharp.dll

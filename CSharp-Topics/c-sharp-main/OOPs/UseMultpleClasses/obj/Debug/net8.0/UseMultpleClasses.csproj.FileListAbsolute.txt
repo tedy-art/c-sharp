@@ -1,0 +1,15 @@
+E:\C Sharp\c-sharp\OOPs\UseMultpleClasses\bin\Debug\net8.0\UseMultpleClasses.exe
+E:\C Sharp\c-sharp\OOPs\UseMultpleClasses\bin\Debug\net8.0\UseMultpleClasses.deps.json
+E:\C Sharp\c-sharp\OOPs\UseMultpleClasses\bin\Debug\net8.0\UseMultpleClasses.runtimeconfig.json
+E:\C Sharp\c-sharp\OOPs\UseMultpleClasses\bin\Debug\net8.0\UseMultpleClasses.dll
+E:\C Sharp\c-sharp\OOPs\UseMultpleClasses\bin\Debug\net8.0\UseMultpleClasses.pdb
+E:\C Sharp\c-sharp\OOPs\UseMultpleClasses\obj\Debug\net8.0\UseMultpleClasses.GeneratedMSBuildEditorConfig.editorconfig
+E:\C Sharp\c-sharp\OOPs\UseMultpleClasses\obj\Debug\net8.0\UseMultpleClasses.AssemblyInfoInputs.cache
+E:\C Sharp\c-sharp\OOPs\UseMultpleClasses\obj\Debug\net8.0\UseMultpleClasses.AssemblyInfo.cs
+E:\C Sharp\c-sharp\OOPs\UseMultpleClasses\obj\Debug\net8.0\UseMultpleClasses.csproj.CoreCompileInputs.cache
+E:\C Sharp\c-sharp\OOPs\UseMultpleClasses\obj\Debug\net8.0\UseMultpleClasses.sourcelink.json
+E:\C Sharp\c-sharp\OOPs\UseMultpleClasses\obj\Debug\net8.0\UseMultpleClasses.dll
+E:\C Sharp\c-sharp\OOPs\UseMultpleClasses\obj\Debug\net8.0\refint\UseMultpleClasses.dll
+E:\C Sharp\c-sharp\OOPs\UseMultpleClasses\obj\Debug\net8.0\UseMultpleClasses.pdb
+E:\C Sharp\c-sharp\OOPs\UseMultpleClasses\obj\Debug\net8.0\UseMultpleClasses.genruntimeconfig.cache
+E:\C Sharp\c-sharp\OOPs\UseMultpleClasses\obj\Debug\net8.0\ref\UseMultpleClasses.dll

@@ -1,0 +1,15 @@
+E:\C Sharp\c-sharp\NamedArgumentsInMethods\bin\Debug\net8.0\NamedArgumentsInMethods.exe
+E:\C Sharp\c-sharp\NamedArgumentsInMethods\bin\Debug\net8.0\NamedArgumentsInMethods.deps.json
+E:\C Sharp\c-sharp\NamedArgumentsInMethods\bin\Debug\net8.0\NamedArgumentsInMethods.runtimeconfig.json
+E:\C Sharp\c-sharp\NamedArgumentsInMethods\bin\Debug\net8.0\NamedArgumentsInMethods.dll
+E:\C Sharp\c-sharp\NamedArgumentsInMethods\bin\Debug\net8.0\NamedArgumentsInMethods.pdb
+E:\C Sharp\c-sharp\NamedArgumentsInMethods\obj\Debug\net8.0\NamedArgumentsInMethods.GeneratedMSBuildEditorConfig.editorconfig
+E:\C Sharp\c-sharp\NamedArgumentsInMethods\obj\Debug\net8.0\NamedArgumentsInMethods.AssemblyInfoInputs.cache
+E:\C Sharp\c-sharp\NamedArgumentsInMethods\obj\Debug\net8.0\NamedArgumentsInMethods.AssemblyInfo.cs
+E:\C Sharp\c-sharp\NamedArgumentsInMethods\obj\Debug\net8.0\NamedArgumentsInMethods.csproj.CoreCompileInputs.cache
+E:\C Sharp\c-sharp\NamedArgumentsInMethods\obj\Debug\net8.0\NamedArgumentsInMethods.sourcelink.json
+E:\C Sharp\c-sharp\NamedArgumentsInMethods\obj\Debug\net8.0\NamedArgumentsInMethods.dll
+E:\C Sharp\c-sharp\NamedArgumentsInMethods\obj\Debug\net8.0\refint\NamedArgumentsInMethods.dll
+E:\C Sharp\c-sharp\NamedArgumentsInMethods\obj\Debug\net8.0\NamedArgumentsInMethods.pdb
+E:\C Sharp\c-sharp\NamedArgumentsInMethods\obj\Debug\net8.0\NamedArgumentsInMethods.genruntimeconfig.cache
+E:\C Sharp\c-sharp\NamedArgumentsInMethods\obj\Debug\net8.0\ref\NamedArgumentsInMethods.dll

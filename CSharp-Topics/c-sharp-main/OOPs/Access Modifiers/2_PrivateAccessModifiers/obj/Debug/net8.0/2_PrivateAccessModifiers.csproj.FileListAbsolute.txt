@@ -1,0 +1,15 @@
+E:\C Sharp\c-sharp\OOPs\Access Modifiers\2_PrivateAccessModifiers\bin\Debug\net8.0\2_PrivateAccessModifiers.exe
+E:\C Sharp\c-sharp\OOPs\Access Modifiers\2_PrivateAccessModifiers\bin\Debug\net8.0\2_PrivateAccessModifiers.deps.json
+E:\C Sharp\c-sharp\OOPs\Access Modifiers\2_PrivateAccessModifiers\bin\Debug\net8.0\2_PrivateAccessModifiers.runtimeconfig.json
+E:\C Sharp\c-sharp\OOPs\Access Modifiers\2_PrivateAccessModifiers\bin\Debug\net8.0\2_PrivateAccessModifiers.dll
+E:\C Sharp\c-sharp\OOPs\Access Modifiers\2_PrivateAccessModifiers\bin\Debug\net8.0\2_PrivateAccessModifiers.pdb
+E:\C Sharp\c-sharp\OOPs\Access Modifiers\2_PrivateAccessModifiers\obj\Debug\net8.0\2_PrivateAccessModifiers.GeneratedMSBuildEditorConfig.editorconfig
+E:\C Sharp\c-sharp\OOPs\Access Modifiers\2_PrivateAccessModifiers\obj\Debug\net8.0\2_PrivateAccessModifiers.AssemblyInfoInputs.cache
+E:\C Sharp\c-sharp\OOPs\Access Modifiers\2_PrivateAccessModifiers\obj\Debug\net8.0\2_PrivateAccessModifiers.AssemblyInfo.cs
+E:\C Sharp\c-sharp\OOPs\Access Modifiers\2_PrivateAccessModifiers\obj\Debug\net8.0\2_PrivateAccessModifiers.csproj.CoreCompileInputs.cache
+E:\C Sharp\c-sharp\OOPs\Access Modifiers\2_PrivateAccessModifiers\obj\Debug\net8.0\2_PrivateAccessModifiers.sourcelink.json
+E:\C Sharp\c-sharp\OOPs\Access Modifiers\2_PrivateAccessModifiers\obj\Debug\net8.0\2_PrivateAccessModifiers.dll
+E:\C Sharp\c-sharp\OOPs\Access Modifiers\2_PrivateAccessModifiers\obj\Debug\net8.0\refint\2_PrivateAccessModifiers.dll
+E:\C Sharp\c-sharp\OOPs\Access Modifiers\2_PrivateAccessModifiers\obj\Debug\net8.0\2_PrivateAccessModifiers.pdb
+E:\C Sharp\c-sharp\OOPs\Access Modifiers\2_PrivateAccessModifiers\obj\Debug\net8.0\2_PrivateAccessModifiers.genruntimeconfig.cache
+E:\C Sharp\c-sharp\OOPs\Access Modifiers\2_PrivateAccessModifiers\obj\Debug\net8.0\ref\2_PrivateAccessModifiers.dll

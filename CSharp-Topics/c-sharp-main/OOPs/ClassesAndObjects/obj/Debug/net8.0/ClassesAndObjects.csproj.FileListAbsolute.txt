@@ -1,0 +1,15 @@
+E:\C Sharp\c-sharp\OOPs\ClassesAndObjects\bin\Debug\net8.0\ClassesAndObjects.exe
+E:\C Sharp\c-sharp\OOPs\ClassesAndObjects\bin\Debug\net8.0\ClassesAndObjects.deps.json
+E:\C Sharp\c-sharp\OOPs\ClassesAndObjects\bin\Debug\net8.0\ClassesAndObjects.runtimeconfig.json
+E:\C Sharp\c-sharp\OOPs\ClassesAndObjects\bin\Debug\net8.0\ClassesAndObjects.dll
+E:\C Sharp\c-sharp\OOPs\ClassesAndObjects\bin\Debug\net8.0\ClassesAndObjects.pdb
+E:\C Sharp\c-sharp\OOPs\ClassesAndObjects\obj\Debug\net8.0\ClassesAndObjects.GeneratedMSBuildEditorConfig.editorconfig
+E:\C Sharp\c-sharp\OOPs\ClassesAndObjects\obj\Debug\net8.0\ClassesAndObjects.AssemblyInfoInputs.cache
+E:\C Sharp\c-sharp\OOPs\ClassesAndObjects\obj\Debug\net8.0\ClassesAndObjects.AssemblyInfo.cs
+E:\C Sharp\c-sharp\OOPs\ClassesAndObjects\obj\Debug\net8.0\ClassesAndObjects.csproj.CoreCompileInputs.cache
+E:\C Sharp\c-sharp\OOPs\ClassesAndObjects\obj\Debug\net8.0\ClassesAndObjects.sourcelink.json
+E:\C Sharp\c-sharp\OOPs\ClassesAndObjects\obj\Debug\net8.0\ClassesAndObjects.dll
+E:\C Sharp\c-sharp\OOPs\ClassesAndObjects\obj\Debug\net8.0\refint\ClassesAndObjects.dll
+E:\C Sharp\c-sharp\OOPs\ClassesAndObjects\obj\Debug\net8.0\ClassesAndObjects.pdb
+E:\C Sharp\c-sharp\OOPs\ClassesAndObjects\obj\Debug\net8.0\ClassesAndObjects.genruntimeconfig.cache
+E:\C Sharp\c-sharp\OOPs\ClassesAndObjects\obj\Debug\net8.0\ref\ClassesAndObjects.dll

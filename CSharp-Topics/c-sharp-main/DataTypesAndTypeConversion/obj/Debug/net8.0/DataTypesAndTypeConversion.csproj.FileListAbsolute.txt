@@ -1,0 +1,15 @@
+E:\C Sharp\c-sharp\DataTypesAndTypeConversion\bin\Debug\net8.0\DataTypesAndTypeConversion.exe
+E:\C Sharp\c-sharp\DataTypesAndTypeConversion\bin\Debug\net8.0\DataTypesAndTypeConversion.deps.json
+E:\C Sharp\c-sharp\DataTypesAndTypeConversion\bin\Debug\net8.0\DataTypesAndTypeConversion.runtimeconfig.json
+E:\C Sharp\c-sharp\DataTypesAndTypeConversion\bin\Debug\net8.0\DataTypesAndTypeConversion.dll
+E:\C Sharp\c-sharp\DataTypesAndTypeConversion\bin\Debug\net8.0\DataTypesAndTypeConversion.pdb
+E:\C Sharp\c-sharp\DataTypesAndTypeConversion\obj\Debug\net8.0\DataTypesAndTypeConversion.GeneratedMSBuildEditorConfig.editorconfig
+E:\C Sharp\c-sharp\DataTypesAndTypeConversion\obj\Debug\net8.0\DataTypesAndTypeConversion.AssemblyInfoInputs.cache
+E:\C Sharp\c-sharp\DataTypesAndTypeConversion\obj\Debug\net8.0\DataTypesAndTypeConversion.AssemblyInfo.cs
+E:\C Sharp\c-sharp\DataTypesAndTypeConversion\obj\Debug\net8.0\DataTypesAndTypeConversion.csproj.CoreCompileInputs.cache
+E:\C Sharp\c-sharp\DataTypesAndTypeConversion\obj\Debug\net8.0\DataTypesAndTypeConversion.sourcelink.json
+E:\C Sharp\c-sharp\DataTypesAndTypeConversion\obj\Debug\net8.0\DataTypesAndTypeConversion.dll
+E:\C Sharp\c-sharp\DataTypesAndTypeConversion\obj\Debug\net8.0\refint\DataTypesAndTypeConversion.dll
+E:\C Sharp\c-sharp\DataTypesAndTypeConversion\obj\Debug\net8.0\DataTypesAndTypeConversion.pdb
+E:\C Sharp\c-sharp\DataTypesAndTypeConversion\obj\Debug\net8.0\DataTypesAndTypeConversion.genruntimeconfig.cache
+E:\C Sharp\c-sharp\DataTypesAndTypeConversion\obj\Debug\net8.0\ref\DataTypesAndTypeConversion.dll

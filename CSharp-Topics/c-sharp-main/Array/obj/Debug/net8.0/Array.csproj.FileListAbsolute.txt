@@ -1,0 +1,15 @@
+E:\C Sharp\c-sharp\Array\bin\Debug\net8.0\Array.exe
+E:\C Sharp\c-sharp\Array\bin\Debug\net8.0\Array.deps.json
+E:\C Sharp\c-sharp\Array\bin\Debug\net8.0\Array.runtimeconfig.json
+E:\C Sharp\c-sharp\Array\bin\Debug\net8.0\Array.dll
+E:\C Sharp\c-sharp\Array\bin\Debug\net8.0\Array.pdb
+E:\C Sharp\c-sharp\Array\obj\Debug\net8.0\Array.GeneratedMSBuildEditorConfig.editorconfig
+E:\C Sharp\c-sharp\Array\obj\Debug\net8.0\Array.AssemblyInfoInputs.cache
+E:\C Sharp\c-sharp\Array\obj\Debug\net8.0\Array.AssemblyInfo.cs
+E:\C Sharp\c-sharp\Array\obj\Debug\net8.0\Array.csproj.CoreCompileInputs.cache
+E:\C Sharp\c-sharp\Array\obj\Debug\net8.0\Array.sourcelink.json
+E:\C Sharp\c-sharp\Array\obj\Debug\net8.0\Array.dll
+E:\C Sharp\c-sharp\Array\obj\Debug\net8.0\refint\Array.dll
+E:\C Sharp\c-sharp\Array\obj\Debug\net8.0\Array.pdb
+E:\C Sharp\c-sharp\Array\obj\Debug\net8.0\Array.genruntimeconfig.cache
+E:\C Sharp\c-sharp\Array\obj\Debug\net8.0\ref\Array.dll
