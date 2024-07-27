@@ -1,2 +1,1 @@
-# C# (C-Sharp
-)
+# C# (C-Sharp)
