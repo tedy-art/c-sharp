@@ -644,3 +644,77 @@ O/p:
 ```csharp
 Passing grade.
 ```
+
+## Loops in C#
+
+# 1. while loop
+# 2. for loop
+
+# 1. while loop:
+- `while loop` is used to `iterate` a part of the progam several times.
+- if the number of iteration is not fixed, it is recommended to use `while loop` than `for loop`.
+
+Syntax
+```csharp
+while(condition)
+{
+    // code to be executed
+}
+```
+
+|Note:                                                                                                        |
+|-------------------------------------------------------------------------------------------------------------|
+|`while` loop ka use karke ek block ko repeatedly execute kar sakte ho jab tak specified condition ` rahti hai|
+
+Ex>
+```csharp
+using System;
+
+namespace WhileLoopEx
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i = 1;
+
+            while (i <= 5)
+            {
+                Console.WriteLine(i);
+                i++;
+            }
+
+            Console.ReadLine();
+        }
+    }
+}
+```
+o/p
+```csharp
+1
+2
+3
+4
+5
+```
+
+## Example with user input
+- Yeh code user se input lega aur jab tak condtion true hai tab tak yeh run karega
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string userInput = "";
+
+        while (userInput != "exit")
+        {
+            Console.WriteLine("Enter something (type 'exit' to quit):");
+            userInput = Console.ReadLine();
+            Console.WriteLine("You entered: " + userInput);
+        }
+    }
+}
+```
