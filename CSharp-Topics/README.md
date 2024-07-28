@@ -154,10 +154,65 @@ myNum = 15;
 ```
 
 ### Data Types:
-- int - Store integer value(32 bit) - 4byte Size
-- long - Store integer value(64bit) - 8byte Size
-- float - Store floating-point number(32 bit) - 4byte Size
-- double - 64bit signed floating-point number(64-bit) - 8byte Size
-- bool - Boolen Value(`true` or `false`) - 1bit size
-- char - store single character/letter(Single 16bit Unicode charactor) - 2byte Size
-- string - store sequebce of charactores - 2byte Size(per charactor)
+Sure! Here's the table with serial numbers added:
+
+| Sr. No | Data Type | Description                                                     | Size                      |
+|--------|-----------|-----------------------------------------------------------------|---------------------------|
+| 1      | `int`     | Store integer value (32 bit)                                    | 4 bytes                   |
+| 2      | `long`    | Store integer value (64 bit)                                    | 8 bytes                   |
+| 3      | `float`   | Store floating-point number (32 bit)                            | 4 bytes                   |
+| 4      | `double`  | 64-bit signed floating-point number                             | 8 bytes                   |
+| 5      | `bool`    | Boolean value (`true` or `false`)                               | 1 bit (1 byte for storage)|
+| 6      | `char`    | Store single character/letter (Single 16-bit Unicode character) | 2 bytes                   |
+| 7      | `string`  | Store sequence of characters                                    | 2 bytes per character     |
+
+```csharp
+using System;
+
+namespace DataTypesExample
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // int example
+            int age = 25;
+            Console.WriteLine("Age: " + age);
+
+            // long example
+            long distanceToMoon = 384400000L; // Distance in meters
+            Console.WriteLine("Distance to Moon: " + distanceToMoon + " meters");
+
+            // float example
+            float pi = 3.14F;
+            Console.WriteLine("Value of Pi: " + pi);
+
+            // double example
+            double gravity = 9.81;
+            Console.WriteLine("Gravity: " + gravity + " m/s²");
+
+            // bool example
+            bool isAlive = true;
+            Console.WriteLine("Is Alive: " + isAlive);
+
+            // char example
+            char initial = 'A';
+            Console.WriteLine("Initial: " + initial);
+
+            // string example
+            string greeting = "Hello, World!";
+            Console.WriteLine("Greeting: " + greeting);
+        }
+    }
+}
+```
+Ouptup:
+```csharp
+Age: 25
+Distance to Moon: 384400000 meters
+Value of Pi: 3.14
+Gravity: 9.81 m/s²
+Is Alive: True
+Initial: A
+Greeting: Hello, World!
+```
