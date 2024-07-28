@@ -1,5 +1,28 @@
 # C# (C-Sharp)
 
+# syllabus
+
+
+| Week | Topic                              | Description                                                                 | Status       |
+|------|------------------------------------|-----------------------------------------------------------------------------|--------------|
+| 1    | Introduction to C#                 | History, setup environment, first program                                   | complete	 |
+| 2    | Basic Syntax                       | Variables, data types, operators, comments                                  | complete	 |
+| 3    | Control Structures                 | Conditional statements (if, switch), loops (for, while, do-while)           | complete	 |
+| 4    | Functions and Methods              | Defining methods, return types, parameters, method overloading              | complete	 |
+| 5    | Object-Oriented Programming (OOP)  | Classes, objects, constructors, fields, properties, methods                 | Incomplete   |
+| 6    | Inheritance and Polymorphism       | Base and derived classes, method overriding, polymorphism                   | Incomplete   |
+| 7    | Interfaces and Abstract Classes    | Defining and implementing interfaces, abstract classes                      | Incomplete   |
+| 8    | Exception Handling                 | Try-catch blocks, custom exceptions                                         | Incomplete   |
+| 9    | Collections                        | Arrays, lists, dictionaries, queues, stacks                                 | Incomplete   |
+| 10   | LINQ Basics                        | Introduction to LINQ, basic queries, filtering, ordering                    | Incomplete   |
+| 11   | File I/O                           | Reading from and writing to files                                           | Incomplete   |
+| 12   | Introduction to .NET Framework     | Overview, Common Language Runtime (CLR), .NET libraries                     | Incomplete   |
+| 13   | Basic Windows Forms Applications   | Creating a simple GUI application                                           | Incomplete   |
+| 14   | Introduction to ASP.NET            | Basics of web development with ASP.NET                                      | Incomplete   |
+| 15   | Debugging and Testing              | Debugging tools, unit testing with MSTest or NUnit                          | Incomplete   |
+| 16   | Project                            | Simple project to apply learned concepts (e.g., a console application)      | Incomplete   |
+
+
 ## What is C#??
 - C# is a modern, innovative, open-source, cross-platform object-oriented programming language.
 	- `Modern` : A programming language of today's era, updated and advanced.
@@ -51,7 +74,7 @@ namespace HelloWorld
 - Yeh line ek class define karti hai jiska naam Program hai.
 - C# mein, sari code ek class ke andar likhi jati hai kyunki C# ek object-oriented language hai.
 
-```#
+```C#
 		static void Main(string[] args)
 		{
 		
@@ -69,3 +92,41 @@ namespace HelloWorld
 - Yeh line console par "Hello, World!" print karti hai. 
 - `Console` class ka `WriteLine` method use hota hai output display karne ke liye.
 
+### C# Comments
+- single line Comments
+```c#
+// import package using `using` keyword
+using System;
+
+namespace HelloWorld
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			// This is single line comment
+			Console.WriteLine("Hello, World!");
+		}
+	}
+}
+```
+
+- single line Comments
+```c#
+// import package using `using` keyword
+using System;
+
+namespace HelloWorld
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			/*
+			 This is single line comment.
+			 we can write multiple comments.
+			*/
+			Console.WriteLine("Hello, World!");
+		}
+	}
+```
