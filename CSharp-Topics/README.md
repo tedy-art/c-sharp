@@ -408,3 +408,239 @@ Null-Coalescing: Default value
 obj is a string
 str2: Hello 
 ```
+
+## Control Structure
+### Conditional Statments
+1. if statement
+2. switch statement
+
+## 1.if statment:
+- The `if` statement in C# is used to execute a block of code only if a specified condition is true.
+- it's a fundamental control structure for making decisions in your program.
+Syntax:
+```csharp
+if(condition)
+{
+    // code to execute if the condition is true
+}
+```
+
+Ex:
+```csharp
+int x = 20;
+int y = 18;
+
+if(x>y)
+{
+    Console.WriteLine("x is greater than y")
+}
+```
+o/p:
+```csharp
+x is greater than y
+```
+
+### if-else statement
+- In an if-else statement, if the condition in the if statement evaluates to false, then the else block will execute. 
+- The else block provides an alternative set of instructions that will run only when the if condition is not met.
+Syntex:
+```csharp
+if (condition)
+{
+    // code execute if the condtion is true
+}
+else
+{
+    // code execute if the condition is false
+}
+```
+
+Ex. 
+```csharp
+using System;
+
+namespace IfElseStatement
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int number = 3;
+
+            if (number > 5):
+            {
+                Console.WriteLine("The number is greater than 5");
+            }
+            else
+            {
+                Console.WriteLine("The number is 5 or less")
+            }
+        }
+    }
+}
+```
+
+O/p:
+```csharp
+The number is 5 or less.
+```
+
+### else if
+- The `else if` statement in C# is used to specify a new condition if the previous `if` condition if `false`.
+- It allows you to chain multiple conditions together, providing more complex decision-making capabilities.
+
+Syntax
+```csharp
+if (condition1)
+{
+    // Code to execute if condition1 is true
+}
+else if (condition2)
+{
+    // Code to execute if condition2 is true
+}
+else
+{
+    // Code to execute if none of the above conditions are true
+}
+```
+Ex:
+```csharp
+using System;
+
+namespace ElseIfExample
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int number = 10;
+
+            if (number > 10)
+            {
+                Console.WriteLine("The number is greater than 10.");
+            }
+            else if (number == 10)
+            {
+                Console.WriteLine("The number is exactly 10.");
+            }
+            else if (number > 5)
+            {
+                Console.WriteLine("The number is greater than 5 but less than 10.");
+            }
+            else
+            {
+                Console.WriteLine("The number is 5 or less.");
+            }
+        }
+    }
+}
+
+```
+O/p:
+```csharp
+The number is exactly 10.
+```
+
+## 2. switch statement
+- The `switch` statement in C# is used to select one of many code blocks to be executed.
+- It's more readable alternative to using multiple `if-else` if statements when you need to compare the same variable to different values.
+
+Syntax:
+```csharp
+switch (expression)
+{
+    case value1:
+        // Code to execute if expression equals value1
+        break;
+    case value2:
+        // Code to execute if expression equals value2
+        break;
+    // Add more cases as needed
+    default:
+        // Code to execute if none of the cases match
+        break;
+}
+```
+Execute lines:
+- the swith expression is evatute once.
+- The value of expression is compared with the value of each case.
+- If there is any match, the associated block is executed
+
+Ex.
+```csharp
+using System;
+
+namespace SwitchExample
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int number = 3;
+
+            switch (number)
+            {
+                case 1:
+                    Console.WriteLine("The number is one.");
+                    break;
+                case 2:
+                    Console.WriteLine("The number is two.");
+                    break;
+                case 3:
+                    Console.WriteLine("The number is three.");
+                    break;
+                case 4:
+                    Console.WriteLine("The number is four.");
+                    break;
+                default:
+                    Console.WriteLine("The number is not between 1 and 4.");
+                    break;
+            }
+        }
+    }
+}
+```
+O/p:
+```csharp
+The number is three.
+```
+
+### Enhances example with Fall-through:
+- if you want to execute the same code for multiple cases, you can use fall-through by omitting the `break` statment.
+
+```csharp
+using System;
+
+namespace SwitchExample
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            char grade = 'B';
+
+            switch (grade)
+            {
+                case 'A':
+                case 'B':
+                case 'C':
+                    Console.WriteLine("Passing grade.");
+                    break;
+                case 'D':
+                case 'F':
+                    Console.WriteLine("Failing grade.");
+                    break;
+                default:
+                    Console.WriteLine("Invalid grade.");
+                    break;
+            }
+        }
+    }
+}
+```
+
+O/p:
+```csharp
+Passing grade.
+```
