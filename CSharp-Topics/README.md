@@ -216,3 +216,195 @@ Is Alive: True
 Initial: A
 Greeting: Hello, World!
 ```
+
+## operators
+- Operators are used to perform operation on variables and values.
+- C# mein operators symbols hote hain jo specify karte hain kis type ka computation perform karna hai. 
+- Yahan pe C# mein alag-alag types ke operators hai.
+
+### 1. Arithmetic Operators
+- Arithmetic operators basic mathematical operations ke liye use hote hain.
+
+| Operator | Description                 | Example       | Result        |
+|----------|-----------------------------|---------------|---------------|
+| `+`      | Addition                    | `5 + 3`       | `8`           |
+| `-`      | Subtraction                 | `5 - 3`       | `2`           |
+| `*`      | Multiplication              | `5 * 3`       | `15`          |
+| `/`      | Division                    | `6 / 3`       | `2`           |
+| `%`      | Modulus (remainder)         | `5 % 3`       | `2`           |
+| `++`     | Increment                   | `a++`         | `a = a + 1`   |
+| `--`     | Decrement                   | `a--`         | `a = a - 1`   |
+
+### 2. Relational Operators
+- Relational operators do values ko compare karne ke liye use hote hain.
+
+| Operator | Description                 | Example       | Result        |
+|----------|-----------------------------|---------------|---------------|
+| `==`     | Equal to                    | `5 == 3`      | `false`       |
+| `!=`     | Not equal to                | `5 != 3`      | `true`        |
+| `>`      | Greater than                | `5 > 3`       | `true`        |
+| `<`      | Less than                   | `5 < 3`       | `false`       |
+| `>=`     | Greater than or equal to    | `5 >= 3`      | `true`        |
+| `<=`     | Less than or equal to       | `5 <= 3`      | `false`       |
+
+### 3. Logical Operators
+- Logical operators boolean values pe logical operations perform karne ke liye use hote hain.
+
+| Operator | Description                 | Example       | Result        |
+|----------|-----------------------------|---------------|---------------|
+| `&&`     | Logical AND                 | `true && false`| `false`       |
+| `||`     | Logical OR                  | `true || false`| `true`        |
+| `!`      | Logical NOT                 | `!true`       | `false`       |
+
+1. &&:
+- return `true` if both condition are `true` else `false`
+
+2. ||:
+- return `true` if one of the condition is true
+
+3. !:
+- return `true` if condition return `false`
+
+### 4. Assignment Operators
+- Assignment operators variables ko values assign karne ke liye use hote hain.
+
+| Operator | Description                 | Example       | Result        |
+|----------|-----------------------------|---------------|---------------|
+| `=`      | Assign                      | `a = 5`       | `a = 5`       |
+| `+=`     | Add and assign              | `a += 3`      | `a = a + 3`   |
+| `-=`     | Subtract and assign         | `a -= 3`      | `a = a - 3`   |
+| `*=`     | Multiply and assign         | `a *= 3`      | `a = a * 3`   |
+| `/=`     | Divide and assign           | `a /= 3`      | `a = a / 3`   |
+| `%=`     | Modulus and assign          | `a %= 3`      | `a = a % 3`   |
+
+### 5. Bitwise Operators
+- Bitwise operators integers pe bit-level operations perform karne ke liye use hote hain.
+
+| Operator | Description                 | Example       | Result        |
+|----------|-----------------------------|---------------|---------------|
+| `&`      | Bitwise AND                 | `5 & 3`       | `1`           |
+| `|`      | Bitwise OR                  | `5 | 3`       | `7`           |
+| `^`      | Bitwise XOR                 | `5 ^ 3`       | `6`           |
+| `~`      | Bitwise complement          | `~5`          | `-6`          |
+| `<<`     | Left shift                  | `5 << 1`      | `10`          |
+| `>>`     | Right shift                 | `5 >> 1`      | `2`           |
+
+### 6. Conditional (Ternary) Operator
+- Conditional operator ek Boolean expression ki value ke basis pe do values me se ek ko return karta hai.
+
+| Operator | Description                 | Example       | Result        |
+|----------|-----------------------------|---------------|---------------|
+| `? :`    | Conditional                 | `a > b ? a : b`| Returns `a` if `a > b`, else `b`|
+
+### 7. Null-Coalescing Operator
+- Null-coalescing operator left-hand operand ko return karta hai agar wo null nahi hai; 
+- otherwise, ye right-hand operand ko return karta hai.
+
+| Operator | Description                 | Example       | Result        |
+|----------|-----------------------------|---------------|---------------|
+| `??`     | Null-coalescing             | `a ?? b`      | Returns `a` if `a` is not null, else `b`|
+
+### 8. Type Operators
+- Type operators type checks aur type conversions perform karne ke liye use hote hain.
+
+| Operator | Description                 | Example       | Result        |
+|----------|-----------------------------|---------------|---------------|
+| `is`     | Type compatibility check    | `a is string` | Returns `true` if `a` is of type `string` |
+| `as`     | Type conversion             | `obj as string`| Converts `obj` to `string` if possible, else `null`|
+
+### Example Usage
+
+```csharp
+using System;
+
+namespace OperatorsExample
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Arithmetic Operators
+            int a = 10;
+            int b = 5;
+            Console.WriteLine("Addition: " + (a + b));
+            Console.WriteLine("Subtraction: " + (a - b));
+            Console.WriteLine("Multiplication: " + (a * b));
+            Console.WriteLine("Division: " + (a / b));
+            Console.WriteLine("Modulus: " + (a % b));
+
+            // Relational Operators
+            Console.WriteLine("Equal: " + (a == b));
+            Console.WriteLine("Not Equal: " + (a != b));
+            Console.WriteLine("Greater than: " + (a > b));
+            Console.WriteLine("Less than: " + (a < b));
+
+            // Logical Operators
+            bool x = true;
+            bool y = false;
+            Console.WriteLine("Logical AND: " + (x && y));
+            Console.WriteLine("Logical OR: " + (x || y));
+            Console.WriteLine("Logical NOT: " + (!x));
+
+            // Assignment Operators
+            int c = 10;
+            c += 5;
+            Console.WriteLine("Add and assign: " + c);
+            c -= 3;
+            Console.WriteLine("Subtract and assign: " + c);
+
+            // Bitwise Operators
+            int m = 5;  // 0101 in binary
+            int n = 3;  // 0011 in binary
+            Console.WriteLine("Bitwise AND: " + (m & n));  // 0001 in binary
+            Console.WriteLine("Bitwise OR: " + (m | n));   // 0111 in binary
+            Console.WriteLine("Bitwise XOR: " + (m ^ n));  // 0110 in binary
+
+            // Conditional (Ternary) Operator
+            int max = (a > b) ? a : b;
+            Console.WriteLine("Max value: " + max);
+
+            // Null-Coalescing Operator
+            string str = null;
+            string result = str ?? "Default value";
+            Console.WriteLine("Null-Coalescing: " + result);
+
+            // Type Operators
+            object obj = "Hello";
+            if (obj is string)
+            {
+                Console.WriteLine("obj is a string");
+            }
+
+            string str2 = obj as string;
+            if (str2 != null)
+            {
+                Console.WriteLine("str2: " + str2);
+            }
+        }
+    }
+}
+```
+O/p
+```csharp
+Addition: 15
+Subtraction: 5
+Multiplication: 50
+Division: 2
+Modulus: 0
+Equal: False
+Not Equal: True
+Greater than: True
+Less than: False
+Logical AND: False
+Logical OR: True
+Logical NOT: False
+Add and assign: 15
+Subtract and assign: 12
+Bitwise AND: 1
+Bitwise OR: 7
+Bitwise XOR: 6
+Max value: 10
+Null-Coalescing: Default value
+obj is a string
+str2: Hello 
+```
