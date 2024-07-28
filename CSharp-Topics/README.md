@@ -3,9 +3,9 @@
 # syllabus
 
 
-| Week | Topic                              | Description                                                                 | Status       |
+| sr.no| Topic                              | Description                                                                 | Status       |
 |------|------------------------------------|-----------------------------------------------------------------------------|--------------|
-| 1    | Introduction to C#                 | History, setup environment, first program                                   | complete	 |
+| 1    | Introduction to C#                 | first program													              | complete	 |
 | 2    | Basic Syntax                       | Variables, data types, operators, comments                                  | complete	 |
 | 3    | Control Structures                 | Conditional statements (if, switch), loops (for, while, do-while)           | complete	 |
 | 4    | Functions and Methods              | Defining methods, return types, parameters, method overloading              | complete	 |
@@ -32,7 +32,7 @@
 	- `Object-oriented` : Uses classes and objects to manage and reuse code effectively.
 
 ## Syntax:
-```c#
+```csharp
 using System; // import package using `using` keyword
 
 namespace HelloWorld
@@ -48,14 +48,14 @@ namespace HelloWorld
 ```
 
 Expanation:
-```C#
+```csharp
 using System;
 ```
 - yeh line `System` namespace ko import karti hai.
 - iska matlab yeh hai ki aap `System` namespace ke under defined classes ko directly use kar sakte hai.
 - e.g.: `Console` class, jo hamare program main use ho raha hai, `System` namespace mein defined hai.
 
-```C#
+```csharp
 namespace HelloWorld
 {
 
@@ -65,7 +65,7 @@ namespace HelloWorld
 - Namespace ka use code ko logically group karne aur naming conflicts ko avoid karne ke liye hota hai.
 - Yahaan, humne apna namespace HelloWorld rakha hai.
 
-```C#
+```csharp
 	class Program
 	{
 	
@@ -74,7 +74,7 @@ namespace HelloWorld
 - Yeh line ek class define karti hai jiska naam Program hai.
 - C# mein, sari code ek class ke andar likhi jati hai kyunki C# ek object-oriented language hai.
 
-```C#
+```csharp
 		static void Main(string[] args)
 		{
 		
@@ -86,7 +86,7 @@ namespace HelloWorld
 - `void` return type batata hai ki yeh method kuch return nahi karega.
 - `string[] args` command-line arguments ko represent karta hai jo program ke start hone par pass kiye ja sakte hain.
 
-```C#
+```csharp
             Console.WriteLine("Hello, World!");
 ```
 - Yeh line console par "Hello, World!" print karti hai. 
@@ -94,7 +94,7 @@ namespace HelloWorld
 
 ### C# Comments
 - single line Comments
-```c#
+```csharp
 // import package using `using` keyword
 using System;
 
@@ -111,9 +111,11 @@ namespace HelloWorld
 }
 ```
 
-- single line Comments
-```c#
-// import package using `using` keyword
+- Multi line Comments
+```csharp
+/*
+ import package using `using` keyword
+*/
 using System;
 
 namespace HelloWorld
@@ -130,3 +132,25 @@ namespace HelloWorld
 		}
 	}
 ```
+
+### Variables:
+- Variables are containers for storing data values.
+
+#### Declaring a Variable:
+```csharp
+int myNumber;
+```
+- int is the data type.
+- myNumber is a variable name we declare.
+
+#### Initializing Variables
+```csharp
+int myNumber = 10;
+
+// or
+int myNum;
+myNum = 15;
+
+```
+
+### Data Types:
