@@ -892,3 +892,43 @@ namespace MyApplication
   }
 }
 ```
+
+O/P:
+```
+Outer: 1
+ Inner: 1
+ Inner: 2
+ Inner: 3
+Outer: 2
+ Inner: 1
+ Inner: 2
+ Inner: 3
+```
+
+## The foreach loop
+- There also a "foreach" loop, which is used to exclusively to loop through elements in an array.
+
+Syntax:
+```
+foreach(type variablename in arrayname)
+{
+    //code block to be executed
+}
+```
+
+Ex
+```csharp
+using System;
+
+namespace foreachLoop
+{
+    class Program
+    {
+        string[] car = {"volvo", "BMW", "Ford", "Mazda"};
+        foreach(string i in arr)
+        {
+            Console.WriteLine(i);
+        }
+    }
+}
+```
