@@ -154,3 +154,10 @@ myNum = 15;
 ```
 
 ### Data Types:
+- int - Store integer value(32 bit) - 4byte Size
+- long - Store integer value(64bit) - 8byte Size
+- float - Store floating-point number(32 bit) - 4byte Size
+- double - 64bit signed floating-point number(64-bit) - 8byte Size
+- bool - Boolen Value(`true` or `false`) - 1bit size
+- char - store single character/letter(Single 16bit Unicode charactor) - 2byte Size
+- string - store sequebce of charactores - 2byte Size(per charactor)
