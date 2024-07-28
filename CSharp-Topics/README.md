@@ -563,7 +563,7 @@ switch (expression)
 }
 ```
 Execute lines:
-- the swith expression is evatute once.
+- the switch expression is evatute once.
 - The value of expression is compared with the value of each case.
 - If there is any match, the associated block is executed
 
@@ -766,5 +766,105 @@ o/p:
 - get input from user in *do while* loop:
 
 ```
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string userInput;
+
+        do
+        {
+            Console.WriteLine("Enter something (type 'exit' to quit):");
+            userInput = Console.ReadLine();
+            Console.WriteLine("You entered: " + userInput);
+        } while (userInput != "exit");
+    }
+}
 
 ```
+
+
+## for loop 
+- When you know exactly how many times you want to loop through a block of code, use the "for" loop instead of a while loop.
+
+Syntax:
+```
+for(initialization; condition; increment/decrement)
+{
+    // code block to be executed.
+}
+```
+
+**Initialization:** 
+- Sets the starting value of the loop control variable(s).
+- Execute once at the beginning of the loop.
+
+**Condition:**
+- Checks if the loop should continue.
+- Evaluted before each iteration.
+- if `true`, the loop executes; if `false`, the loop stop
+
+**increment/decrement:**
+- update the loop control variable(s).
+- Executes after each iteration of the loop body.
+
+Ex
+```csharp
+using System;
+
+namespace forLoop
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine(i);
+            }
+            Console.ReadLine();
+        }
+    }
+}
+```
+
+O/p:
+```
+0
+1
+2
+3
+4
+```
+
+Ex2
+```csharp
+using System;
+
+namespace forLoop
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            for (int i = 0; i <= 10; i= i+2)
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+}
+```
+O/p:
+```
+0
+2
+4
+6
+8
+10
+```
+
+## Nested Loops:
