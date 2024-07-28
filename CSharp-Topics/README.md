@@ -718,3 +718,53 @@ class Program
     }
 }
 ```
+
+## do-while loop:
+- The do-while is a variant of the while loop.
+- This loop will execute the code block once
+- before checking if the condition is true, then it will repeat the loop as long as the condition is true.
+
+Syntax
+```
+do
+{
+    // block to be executed
+}
+while(condtion);
+```
+
+```
+using System;
+
+namespace doWhileLoop
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i = 0;
+            
+            do
+            {
+                Console.WriteLine(i);
+            }
+            while(i < 5);
+        }
+    }
+}
+```
+o/p:
+```
+1
+2
+3
+4
+5
+```
+
+**Example with user input:**
+- get input from user in *do while* loop:
+
+```
+
+```
