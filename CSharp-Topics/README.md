@@ -1026,6 +1026,64 @@ I just got executed!
 3. **Complex Types:** `array`,`string`, and `object of classes`.
 4. **Generic Types:** `List<T>`, `Dictionary<TKey, TValue>` etc.
 
+### Primitive return types
 ```csharp
+using System;
 
+namespace ReturnTypes
+{
+    class Program
+    {
+        static int add(int a, int b)
+        {
+            return a + b;
+        }
+
+        static void Main(string[] args)
+        {
+            int sum = add(5, 3);
+            Console.WriteLine($"sum : {sum}");
+        }
+    }
+}
+```
+
+O/p
+```
+sum : 8
+```
+
+### Complex Return Type
+- a method that returns an objects or a complex type.
+```csharp
+using System;
+
+namespace ComplexReturnType
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Person person = CreatePerson("John", "Doe");
+            Console.WriteLine($"Name: {person.FirstName} {person.LastName}");
+            Console.ReadLine();
+        }
+
+        static Person CreatePerson(string firstName, string lastName)
+        {
+            return new Person { FirstName = firstName, LastName = lastName };
+        }
+    }
+
+    class Person
+    {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+    }
+}
+```
+
+O/p:
+```
+Name: John Doe
 ```
