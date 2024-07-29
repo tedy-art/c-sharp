@@ -8,7 +8,7 @@
 | 1    | Introduction to C#                 | first program													              | complete	 |
 | 2    | Basic Syntax                       | Variables, data types, operators, comments                                  | complete	 |
 | 3    | Control Structures                 | Conditional statements (if, switch), loops (for, while, do-while)           | complete	 |
-| 4    | Functions and Methods              | Defining methods, return types, parameters, method overloading              | complete	 |
+| 4    | Methods                            | Defining methods, return types, parameters, method overloading              | complete	 |
 | 5    | Object-Oriented Programming (OOP)  | Classes, objects, constructors, fields, properties, methods                 | Incomplete   |
 | 6    | Inheritance and Polymorphism       | Base and derived classes, method overriding, polymorphism                   | Incomplete   |
 | 7    | Interfaces and Abstract Classes    | Defining and implementing interfaces, abstract classes                      | Incomplete   |
@@ -253,7 +253,7 @@ Greeting: Hello, World!
 | Operator | Description                 | Example       | Result        |
 |----------|-----------------------------|---------------|---------------|
 | `&&`     | Logical AND                 | `true && false`| `false`       |
-| `||`     | Logical OR                  | `true || false`| `true`        |
+| \|\|     | Logical OR                  | `true || false`| `true`        |
 | `!`      | Logical NOT                 | `!true`       | `false`       |
 
 1. &&:
@@ -647,10 +647,10 @@ Passing grade.
 
 ## Loops in C#
 
-# 1. while loop
-# 2. for loop
+### 1. while loop
+### 2. for loop
 
-# 1. while loop:
+## 1. while loop:
 - `while loop` is used to `iterate` a part of the progam several times.
 - if the number of iteration is not fixed, it is recommended to use `while loop` than `for loop`.
 
@@ -786,7 +786,7 @@ class Program
 ```
 
 
-## for loop 
+## 2.for loop 
 - When you know exactly how many times you want to loop through a block of code, use the "for" loop instead of a while loop.
 
 Syntax:
@@ -931,4 +931,101 @@ namespace foreachLoop
         }
     }
 }
+```
+
+O/p:
+```
+volvo
+BMW
+Ford
+Mazda
+```
+
+# Methods
+1. What is Method 
+2. Defining methods
+3. call a method
+4. return types 
+5. parameters & arguments
+6. method overloading
+
+## 1. What is Method??
+- a method is a block of code which only runs when it is called.
+- You can pass data, known as parameter into a method.
+- Methods are used to perform certain actions and they are also known as functions.
+
+## 2. Defining methods
+
+```csharp
+class Program
+{
+    static void nameOfMethod(parameter)
+    {
+        // code to be executed
+    }
+}
+```
+
+Expaination:
+- static -> access modifier
+- void -> return type
+- namrOfMethod -> defining method with `nameOfMethod`
+- parameter -> A list of parameters the method accepts(if any)
+
+## 3. call a method
+- To call (execute) a method, write the method's name followed by two parentheses () and a semicolon;
+
+Syntax:
+```csharp
+using System;
+
+namespace MethodDefCalling
+{
+    class Program
+    {
+        // defining a method
+        static void myMethod()
+        {
+            Console.WriteLine("I just got executed!");
+        }
+        static void Main(string[] args)
+        {
+            // calling a method
+            myMethod();
+
+            // we can call method multiple time
+            myMethod();
+            myMethod();
+            myMethod();
+            myMethod();
+            myMethod();
+            Console.ReadLine();
+        }
+    }
+}
+```
+
+O/p:
+```
+I just got executed!
+I just got executed!
+I just got executed!
+I just got executed!
+I just got executed!
+I just got executed!
+```
+
+## 4. return types 
+- the ruturn type of method specifies the type of value that the method will return to the caller.
+- If method dose not return a value, its return type is `void`.
+- Understanding return types is essential for desigining methods that produce useful results.
+
+**Common Return Types:**
+1. **void:** indicates that the method dose not return a value.
+2. **Primitive Types:** `int`, `double`, `char`, `bool` etc.
+3. **Complex Types:** `array`,`string`, and `object of classes`.
+4. **Generic Types:** `List<T>`, `Dictionary<TKey, TValue>` etc.
+
+```csharp
+
 ```
