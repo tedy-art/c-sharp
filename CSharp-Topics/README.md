@@ -1173,5 +1173,97 @@ Anja Refsnes
 
 Ex.
 ```csharp
-using System
+using System;
+
+namespace ParameterArgumentExample
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Method ko arguments ke sath call karna
+            int result = Add(5, 3);
+            Console.WriteLine("Sum: " + result);
+        }
+
+        // Method ko parameters ke sath define karna
+        static int Add(int x, int y)
+        {
+            return x + y; // x aur y parameters hain
+        }
+    }
+}
 ```
+O/p:
+```
+Sum: 8
+```
+
+## 6. method overloading
+- It is the common way of implementing polymorphism.
+- It is the ability to redefine a function in more than one form.
+- A user can implement function overloading by defining two or more functions in a class sharing the same name.
+
+### Key Points:
+1. Same Method : sab method ka name same hota hai
+2. Different Parameter : Method ke parameter ka type, number ya order alag hona chahiye.
+3. Compile-Time Polymorphism : Method overloading ko compile-time polymorphism bhi kaha jata hai kiyki yeh compile time pe hi decide hota hai ki kaunsa method call hoga.
+
+Ex.
+```
+using System;
+
+namespace MethodOverloading
+{
+    class Program
+    {
+        // Method with two int parameters
+        static int add(int a, int b)
+        {
+            return a + b;
+        }
+
+        // Method with three int parameters
+        static int add(int a, int b, int c)
+        {
+            return a + b + c;
+        }
+
+        // Method with two double parameters
+        static double add(double a, double b)
+        {
+            return a + b;
+        }
+
+        // Method with two string parameters
+        static string add(string a, string b)
+        {
+            return $"{a} {b}";
+        }
+
+        static void Main(string[] args)
+        {
+            int resultTwoSum = add(5, 3);
+            Console.WriteLine($"2 sum : {resultTwoSum}");
+
+            int resultThreeSum = add(3, 4, 5);
+            Console.WriteLine($"3 sum : {resultThreeSum}");
+
+            double resultDoubleSum = add(51.11, 4.55);
+            Console.WriteLine($"double : {resultDoubleSum}");
+
+            string strConcate = add("I", "Tejas");
+            Console.WriteLine($"str : {strConcate}");
+        }
+    }
+}
+```
+
+O/p
+```
+2 sum : 8
+3 sum : 12
+double : 55.66
+str : I Tejas
+```
+
