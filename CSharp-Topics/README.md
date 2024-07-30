@@ -1026,7 +1026,9 @@ I just got executed!
 3. **Complex Types:** `array`,`string`, and `object of classes`.
 4. **Generic Types:** `List<T>`, `Dictionary<TKey, TValue>` etc.
 
-### Primitive return types
+---
+
+### 1. Primitive return types
 ```csharp
 using System;
 
@@ -1053,7 +1055,7 @@ O/p
 sum : 8
 ```
 
-### Complex Return Type
+### 2. Complex Return Type
 - a method that returns an objects or a complex type.
 ```csharp
 using System;
@@ -1086,4 +1088,90 @@ namespace ComplexReturnType
 O/p:
 ```
 Name: John Doe
+```
+
+## 3.Generic Return Types:
+- a method that returna a generic type, such as a `List<T>`.
+```
+using System;
+using System.Collections.Generic;
+
+namespace GenericReturnTypeExample
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<string> names = GetNames();
+            foreach (string name in names)
+            {
+                Console.WriteLine(name);
+            }
+            Console.ReadLine();
+        }
+
+        static List<string> GetNames()
+        {
+            return new List<string> { "Alice", "Bob", "Charlie" };
+        }
+    }
+}
+```
+
+## 5. parameters & arguments
+- In Programming, perticularly in C#, parameter and arguments are related concepts that refer to values used in methods and functions.
+
+### 1.Parameters:
+- Definition:
+    - Parameter are variables defined in the method signature.
+    - They act as a placeholders for the values that will be passed to the method when it is called.
+- Perpose:
+    - They define the type and number of inputs that the method expects.
+
+### 2. Arguments:
+- Definition:
+    - Arguments are the actul values passed to the method when it is called.
+    - These are the data you provide to the method's parameter.
+- Perpose:
+    - They provide the actual data that the method will use.
+
+```csharp
+using System;
+
+namespace ParameterAndArguments
+{
+    class Program
+    {
+        // `string fname` is a type and name of parameter
+        static void myMethod(string fname)
+        {
+            Console.WriteLine(fname + " Refsnes");
+        }
+        
+        static void Main(string[] args)
+        {
+            // "Liam","Jenney" & "Anja" are arguments of method
+            myMethod("Liam");
+            myMethod("Jenney");
+            myMethod("Anja");
+        }
+    }
+}
+```
+
+O/p
+```
+Liam Refsnes
+Jenney Refsnes
+Anja Refsnes
+```
+
+|Note                                                                          |
+|------------------------------------------------------------------------------|
+|**parameter** ka use hum method difine ke vakt karte hai(types are important) |
+|**arguments** ka use hum method calling ke vakt karte hai(types are important)|
+
+Ex.
+```csharp
+using System
 ```
