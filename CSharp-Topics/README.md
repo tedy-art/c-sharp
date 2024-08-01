@@ -947,7 +947,8 @@ Mazda
 3. call a method
 4. return types 
 5. parameters & arguments
-6. method overloading
+6. Method Overloading
+7. Method Overriding
 
 ## 1. What is Method??
 - a method is a block of code which only runs when it is called.
@@ -1267,3 +1268,56 @@ double : 55.66
 str : I Tejas
 ```
 
+## 7. method Overriding:
+- method overriding In c# is a feature of Object-oriented programming that allow a child class to provide a specific implentation of a method that is already defined in the base(parent) class.
+- Ovrridden(child method) method in the derived class has same name, return type, and parameter as the method in the base(parent) class.
+- This allow for polymorphic behaviour depending on the object that is calling it.
+
+### Key Points
+- **Inheritance:** 
+  - Method overriding requires inheritance, as the method in the derived class overrides the method in the base class.
+- **virtual Keyword:** 
+  - The method in the base class that can be overridden must be marked with the virtual keyword.
+- **override Keyword:** 
+  - The method in the derived class that overrides the base class method must be marked with the override keyword.
+- **Polymorphism:** 
+  - Allows for dynamic method resolution at runtime, enabling different objects to call their own version of an overridden method.
+
+```csharp
+using System;
+
+namespace MethodOverridingExample
+{
+    // Base class
+    class Animal
+    {
+        // Virtual method
+        public virtual void Speak()
+        {
+            Console.WriteLine("The animal makes a sound.");
+        }
+    }
+
+    // Derived class
+    class Dog : Animal
+    {
+        // Overriding method
+        public override void Speak()
+        {
+            Console.WriteLine("The dog barks.");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Animal myAnimal = new Animal();  // Create a base class object
+            Animal myDog = new Dog();        // Create a derived class object
+
+            myAnimal.Speak();  // Calls the base class method
+            myDog.Speak();     // Calls the overridden method in the derived class
+        }
+    }
+}
+```
