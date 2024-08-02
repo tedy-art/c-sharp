@@ -1344,4 +1344,37 @@ namespace MethodOverridingExample
 - A class is a blueprint of an object that contains variables for storing data and functions to perform operation on data.
 - A class will not occupy any memory space; hence it is only a logical representation of data.
 
+Advantages of OOP:
+- OOP is faster and easier to execute.
+- OOP provides a clear structure for the programs.
+- OOP help to keep the C# code DRY(don't repeat yourself) and makes the code easier to maintain, modify and debug.
+- OOP makes it possible to create full reusable applications with less code and shorter development time.
+
 ### 2. Classes
+- A blueprint for creating objects.
+- it defines a type of object by building data and methods that operate on the data.
+
+### 3. Objects
+- An instance of a class.
+- it contains actual data and methods defined in the class.
+
+e.g.
+```
+sr.no class(blueprint for actual data)       object(actual data)
+   1         fruit -                           Apple
+                                               Banana
+                                               Mango
+
+   2         Car -                             Volvo
+                                               Audi
+                                               Toyoto
+```
+
+### Create A class
+Syntax:
+```
+class Car
+{
+    // methods or code
+}
+```
