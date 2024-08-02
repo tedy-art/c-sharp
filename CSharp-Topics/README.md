@@ -22,8 +22,8 @@
 | 15   | Debugging and Testing              | Debugging tools, unit testing with MSTest or NUnit                          | Incomplete   |
 | 16   | Project                            | Simple project to apply learned concepts (e.g., a console application)      | Incomplete   |
 
-
-## What is C#??
+---
+# 1. What is C#??
 - C# is a modern, innovative, open-source, cross-platform object-oriented programming language.
 	- `Modern` : A programming language of today's era, updated and advanced.
 	- `Innovative` : New and unique feature that make coding easy and powerful.
@@ -31,7 +31,8 @@
 	- `Cross-platform` : Runs on windows, Linux and macOS
 	- `Object-oriented` : Uses classes and objects to manage and reuse code effectively.
 
-## Syntax:
+ ---
+# 2. Syntax:
 ```csharp
 using System; // import package using `using` keyword
 
@@ -283,7 +284,7 @@ Greeting: Hello, World!
 | Operator | Description                 | Example       | Result        |
 |----------|-----------------------------|---------------|---------------|
 | `&`      | Bitwise AND                 | `5 & 3`       | `1`           |
-| `|`      | Bitwise OR                  | `5 | 3`       | `7`           |
+|  \|      | Bitwise OR                  | `5 | 3`       | `7`           |
 | `^`      | Bitwise XOR                 | `5 ^ 3`       | `6`           |
 | `~`      | Bitwise complement          | `~5`          | `-6`          |
 | `<<`     | Left shift                  | `5 << 1`      | `10`          |
@@ -409,7 +410,9 @@ obj is a string
 str2: Hello 
 ```
 
-## Control Structure
+
+---
+# 3. Control Structure
 ### Conditional Statments
 1. if statement
 2. switch statement
@@ -941,7 +944,8 @@ Ford
 Mazda
 ```
 
-# Methods
+---
+# 4. Methods
 1. What is Method 
 2. Defining methods
 3. call a method
@@ -1321,3 +1325,23 @@ namespace MethodOverridingExample
     }
 }
 ```
+---
+
+# 5. Object-Oriented Programming (OOP):
+1. Object-Oriented Programming
+2. Classes 
+3. objects
+4. constructors
+5. fields
+6. properties
+7. methods
+
+### 1. Object-Oriented Programming
+- Object-Oriented Programming(OOP) is a programming model where programs are orgainzed around objects and data rather than action and logic.
+- OOP allows decomposing a problem into many entities called objects and then building data and functions around these objects.
+- A class is the core of any modern Object-Oriented Programming languages such as C#.
+- In OOP language, creating a class for represinting data is madatory.
+- A class is a blueprint of an object that contains variables for storing data and functions to perform operation on data.
+- A class will not occupy any memory space; hence it is only a logical representation of data.
+
+### 2. Classes
