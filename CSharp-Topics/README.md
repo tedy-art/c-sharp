@@ -1329,12 +1329,14 @@ namespace MethodOverridingExample
 
 # 5. Object-Oriented Programming (OOP):
 1. Object-Oriented Programming
-2. Classes 
-3. objects
-4. constructors
-5. fields
-6. properties
-7. methods
+2. Classes(multiple classes) 
+3. objects(multiple objects)
+4. class Members
+5. methods in class
+6. constructors
+7. fields
+8. properties
+
 
 ### 1. Object-Oriented Programming
 - Object-Oriented Programming(OOP) is a programming model where programs are orgainzed around objects and data rather than action and logic.
@@ -1378,3 +1380,191 @@ class Car
     // methods or code
 }
 ```
+
+### Creating an objects
+- An object is created from a class.
+
+Ex.
+```
+using System;
+
+namespace ClassesAndObject
+{
+    class Car
+    {
+        string color = "Red";
+
+        static void Main(string[] args)
+        {
+            // Creating an object
+            Car myObj = new Car();
+            Console.WriteLine(myObj.color);
+        }
+    }
+}
+```
+
+## Multiple classes and objects:
+1. Multiple Objects
+- hum ek class ke liye ek se jada objects bana sakte hai
+
+ex.
+```
+using System;
+
+namespace MultipleClassesAndObjects
+{
+    class Car
+    {
+        string color = "red";
+
+        static void Main(string[] args)
+        {
+            // Multiple objects
+            Car MyCarObject1 = new Car();
+            Car MyCarObject2 = new Car();
+            Console.WriteLine(MyCarObject1.color);
+            Console.WriteLine(MyCarObject2.color);
+
+        }
+    }
+}
+```
+O/p:
+```
+red
+red
+```
+
+2. Multiple classes
+- you can also create an object of a class and access it in another class.
+- This is often used fro better organization of classes.
+- One class has all method and fields and other class holds the `Main()` method.
+
+Ex.
+
+file name : Program.cs
+```
+using System;
+
+namespace MyApplication
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      // creating a class object from program1.cs
+      Car myObj = new Car();
+      Console.WriteLine(myObj.color);
+    }
+  }
+}
+```
+
+file name : Program1.cs
+```
+using System;
+
+namespace MyApplication
+{
+  class Car
+  {
+    public string color = "red";
+  }
+}
+```
+
+O/p:
+```
+red
+```
+
+### 4. class members
+- fields aur methods jab classes ke andhar he toh unhe class member bualte hai.
+
+|class Car       |
+|----------------|
+|color : red     |
+|method : brake()|
+
+color & method = class member
+
+```
+class Myclass
+{
+    // class members
+    string color = "red"; // class members
+    int maxSpeed = 200; // class members
+    public void fullThrottle() // class members
+    {
+        Console.WriteLine("The car i going as fast as it can!");
+    }
+
+    static void Main(string[] args)
+    {
+        Car myObj = new Car();
+        Console.WriteLine(myObj.color);
+        Console.WriteLine(myObj.maxSpeed);
+    }
+}
+```
+|Note:                                                    |
+|---------------------------------------------------------|
+|we can access fields with help of objects using dot(".") |
+
+- we can also leave the fields blank and modify then when creating the objects.
+
+Ex.
+```
+class Car
+{
+    string color;
+    int maxSpeed;
+
+    static void Main(string[] args)
+    {
+        Car myObj = new Car();
+        myObj.color = "red";
+        myObj.maxSpeed = 200;
+        Console.WriteLine(myObj.color);
+        Console.WriteLine(myObj.maxSpeed);
+    }
+}
+```
+O/p
+```
+red
+200
+```
+
+### 5. methods in class
+- Methods normally belong to a class and they define how an object of a class behaves.
+- just like fields we can access method as well but that method must be "public".
+
+Ex.
+```csharp
+using System;
+
+namespace myApplication
+{
+    class Car
+    {
+        string color;
+        int maxSpeed;
+
+        // Creating a method inside a class
+        public void fullThrottle()
+        {
+            Console.WriteLine("This car is going as fast as it can!");
+        }
+        static void Main(string[] args)
+        {
+            Car myObj = new Car();
+            myObj.fullThrottle(); // calling method
+        }
+    }
+}
+```
+
+
+### 6. constructors
