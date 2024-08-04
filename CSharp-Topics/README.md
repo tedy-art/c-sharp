@@ -1567,4 +1567,51 @@ namespace myApplication
 ```
 
 
-### 6. constructors
+### 6. constructors 
+- A constructor is a special method that used to initialize objects.
+- The advantages of constructor, is that it is called when an object of a class is created.
+- It can be used to set initial values for fields.
+
+Create a constructor:
+```
+using System;
+
+namespace MyApplication
+{
+    class Car
+    {
+        public string model;
+
+        // creating a constructor for Car class
+        public Car()
+        {
+            model = "mustang";
+        }
+
+        static void Main(string[] args)
+        {
+            Car Ford = new Car();
+            Console.WriteLine(Ford.model);
+        }
+    }
+}
+```
+o/p:
+```
+mustang
+```
+
+|sr.no|Note|
+|---|---|
+| 1 | Constructor name match the class name. |
+| 2 | Constructor cannot have a return type. |
+| 3 | Constructor called when the object is created. |
+| 4 | Constructor are created by c# if we not creae constructor however then we are unable to set initial values for fields.|
+
+### Constructor Parameter:
+- Constructor can also take parameters, which is used to initialize fields.
+
+Ex.
+```
+
+```
