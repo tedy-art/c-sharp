@@ -9,18 +9,19 @@
 | 2    | Basic Syntax                       | Variables, data types, operators, comments                                  | complete	 |
 | 3    | Control Structures                 | Conditional statements (if, switch), loops (for, while, do-while)           | complete	 |
 | 4    | Methods                            | Defining methods, return types, parameters, method overloading              | complete	 |
-| 5    | Object-Oriented Programming (OOP)  | Classes, objects, constructors, fields, properties, methods                 | Incomplete   |
-| 6    | Inheritance and Polymorphism       | Base and derived classes, method overriding, polymorphism                   | Incomplete   |
-| 7    | Interfaces and Abstract Classes    | Defining and implementing interfaces, abstract classes                      | Incomplete   |
-| 8    | Exception Handling                 | Try-catch blocks, custom exceptions                                         | Incomplete   |
-| 9    | Collections                        | Arrays, lists, dictionaries, queues, stacks                                 | Incomplete   |
-| 10   | LINQ Basics                        | Introduction to LINQ, basic queries, filtering, ordering                    | Incomplete   |
-| 11   | File I/O                           | Reading from and writing to files                                           | Incomplete   |
-| 12   | Introduction to .NET Framework     | Overview, Common Language Runtime (CLR), .NET libraries                     | Incomplete   |
-| 13   | Basic Windows Forms Applications   | Creating a simple GUI application                                           | Incomplete   |
-| 14   | Introduction to ASP.NET            | Basics of web development with ASP.NET                                      | Incomplete   |
-| 15   | Debugging and Testing              | Debugging tools, unit testing with MSTest or NUnit                          | Incomplete   |
-| 16   | Project                            | Simple project to apply learned concepts (e.g., a console application)      | Incomplete   |
+| 5    | Object-Oriented Programming (OOP)  | Classes, objects, constructors, fields, properties, methods                 | complete     |
+| 6    | Access Modifiers                   | Public private, protected, internal                                         | complete     |
+| 7    | Inheritance and Polymorphism       | Base and derived classes, method overriding, polymorphism                   | Incomplete   |
+| 8    | Interfaces and Abstract Classes    | Defining and implementing interfaces, abstract classes                      | Incomplete   |
+| 9    | Exception Handling                 | Try-catch blocks, custom exceptions                                         | Incomplete   |
+| 10    | Collections                        | Arrays, lists, dictionaries, queues, stacks                                 | Incomplete   |
+| 11   | LINQ Basics                        | Introduction to LINQ, basic queries, filtering, ordering                    | Incomplete   |
+| 12   | File I/O                           | Reading from and writing to files                                           | Incomplete   |
+| 13   | Introduction to .NET Framework     | Overview, Common Language Runtime (CLR), .NET libraries                     | Incomplete   |
+| 14   | Basic Windows Forms Applications   | Creating a simple GUI application                                           | Incomplete   |
+| 15   | Introduction to ASP.NET            | Basics of web development with ASP.NET                                      | Incomplete   |
+| 16   | Debugging and Testing              | Debugging tools, unit testing with MSTest or NUnit                          | Incomplete   |
+| 17   | Project                            | Simple project to apply learned concepts (e.g., a console application)      | Incomplete   |
 
 ---
 # 1. What is C#??
@@ -1613,5 +1614,352 @@ mustang
 
 Ex.
 ```
+using System;
+
+namespace MyConstructorParameterApplication
+{
+    class Car
+    {
+        public string model;
+        public string color;
+        public int year;
+
+        // creating a class constructor with parameter
+        public Car(string modelName, string ModelColor, int modelYear)
+        {
+            model = modelName;
+            // we can use as many parameter as we want
+            color = ModelColor;
+            year = modelYear;
+        }
+
+        static void Main(string[] args)
+        {
+            Car Ford = new Car("mustang", "Red", 1969);
+            Console.WriteLine($"{Ford.color} {Ford.year} {Ford.model}.");
+            Console.ReadLine();
+        }
+    }
+}
+```
+O/p:
+```
+Red 1969 mustang
+```
+
+# 6. Access Modifiers
+- Access ka use class, method properties, fields ya other member ke access level ko control karne ke liye hota hai.
+- yeh access modifiers specify karta hai ki konse members ko konsa code access kar sakte hai.
+
+|sr.no| modifier  | Description                                                                        |
+|-----|-----------|------------------------------------------------------------------------------------|
+|  1  | Public    | The code is accessible for all classes.                                            |
+|  2  | Private   | The private members can be access only within the same class or struct.            |
+|  3  | Protected | Protect members can be accessed within its class and by derived class instances.   |
+|  4  | Internal  | The code is only accessible within its own assembly, but not from another assembly.|
+|  5  | Protected Internal | The protected interal is combination of protected and internal access modifiers. |
+|  6  | Private Protected | The private protected access modifier is a combination of private and protected. |
+
+
+### 1.Public Access Modifiers:
+- Public members can be accessed from any code in the same assembly or another assembly that refernces it.
+
+Ex.
+```csharp
+public class Car{
+    public string model;
+}
+
+class Program{
+    static void Main(string[] args){
+        Car myCar = new Car();
+        myCar.model = "mustang";
+        Console.WriteLine(myCar.model);
+    }
+}
+```
+
+### 2. Private Access Modifiers
+- Private members can be access only within the same class or struct.
+
+Ex.
+```csharp
+public class Car{
+    private string model; // private field
+
+    public void setModel(string mofrl){
+        this.model = model; // Accessible within the same class
+    }
+}
+
+class Program{
+    static void Main(string[] args){
+        Car myCar = new Car();
+        myCar.setModel("mustang");
+        Console.WriteLine(myCar.GetModel());
+    }
+}
+```
+
+### 3.Protected Access Modifiers
 
 ```
+using System;
+
+namespace MyProtectedAccessModifiers{
+    public class Vehicle{
+        protected string brand; // protected field
+
+        public void setBrand(string brand){
+            this.brand = brand; // Accissble within the same class
+        }
+    }
+
+    public class Car : Vehicle{
+        public void DisplayBrand(){
+            Console.WriteLine(brand); // Accessible in child class
+        }
+    }
+
+    class Program{
+        static void Main(string[] args){
+            Car myCar = new Car();
+            myCar.setBrand("Ford");
+            myCar.DisplayBrand(); // Accessible through child class method
+        }
+    }
+}
+```
+
+### 4.Internal Access modifiers
+- The code is only accessible within its own assembly, but not from another assembly.
+- An assembly is a collection of types (classes, interfaces, etc) and resources (data). They are built to work together and form a logical unit of functionality.
+- That's why when we run an assembly all classes and interfaces inside the assembly run together
+
+#### Example: internal within the same Assembly
+```csharp
+using System;
+
+namespace Assembly {
+
+  class Student {
+   internal string name = "Sheeran";
+  }
+
+  class Program {
+    static void Main(string[] args) {
+    
+      // creating object of Student class
+      Student theStudent = new Student();
+      
+      // accessing name field and printing it
+      Console.WriteLine("Name: " + theStudent.name);
+      Console.ReadLine();
+    }
+  }
+}
+```
+
+O/p:
+```
+Name: Sheeran
+```
+
+#### Example: internal in different Assembly
+**Assembly1**
+```csharp
+// Code on Assembly1
+using System;
+
+namespace Assembly1 {
+
+  public class StudentName {
+    internal string name = "Sheeran";
+  }
+
+  class Program {
+    static void Main(string[] args) {
+    }
+  }
+}
+```
+
+**Assembly2**
+```
+// Code on Assembly2
+using System;
+
+// access Assembly1
+using Assembly1;
+
+namespace Assembly2 {
+  class Program {
+    static void Main(string[] args) {
+      StudentName student = new StudentName();
+
+      // accessing name field from Assembly1
+      Console.Write(student.name);
+      Console.ReadLine();
+     }
+  }
+}
+```
+
+o/p
+```
+Error    CS0122    'StudentName.name' is inaccessible due to its protection level
+```
+Exaplain:
+This is because `name` is an internal field present in Assembly1.
+
+### 5.protected internal Access Modifiers
+- The protected internal is a combination of protected and internal access modifiers.
+- When we declare a member protected internal, it can be accessed from the same assembly and the derived class of the containing class from any other assembly.
+
+Ex.
+```csharp
+// Code on Assembly1
+using System;
+
+namespace Assembly1 {
+  public class Greet {
+    protected internal string msg="Hello";
+  }
+
+  class Program {
+    static void Main(string[] args) {
+      Greet greet = new Greet();
+      Console.WriteLine(greet.msg);
+      Console.ReadLine();
+     }
+  }
+}
+```
+Output
+```
+Hello
+```
+
+- The above code is in Assembly1.
+- In the above example, we have created a class named `Greet` with a field `msg`. Since the field is protected internal, we are able to access it from the Program class as they are in the same assembly.
+
+
+Let's derive a class from Greet in another assembly and try to access the protected internal field msg from it.
+
+```csharp
+// Code on Assembly2
+using System;
+
+// access Assembly1
+using Assembly1;
+
+namespace Assembly2 {
+
+  // derived class of Greet
+  class Program: Greet {
+    static void Main(string[] args) {
+      Program greet = new Program();
+
+      // accessing name field from Assembly1
+      Console.Write(greet.msg);
+      Console.ReadLine();
+    }
+  }
+}
+```
+Output
+```
+Hello
+```
+
+- The above code is in Assembly2.
+
+- In the above example, we have inherited the `Program` class from the `Greet` class(from Assembly1).
+
+```
+// accessing name field from Assembly1
+Console.Write(greet.msg);
+```
+
+- We are able to access the `msg` from the `Greet` class of Assembly1 from Assembly2.
+- This is because the `msg` is a protected internal field and we are trying to access it from the child class of `Greet`.
+
+### 5.private internal Access Modifiers
+- The private protected access modifier is a combination of private and protected. 
+- It is available from the C# version 7.2 and later.
+
+- When we declare a member private protected, it can only be accessed within the same class, and its derived class within the same assembly. 
+
+For example,
+```csharp
+// Code in Assembly1
+using System;
+
+namespace Assembly1 {
+  public class StudentName {
+    private protected string name = "Sheeran";
+  }
+
+  //derived class of StudentName class
+  class Program1 : StudentName {
+
+    static void Main(string[] args) {
+
+      Program1 student = new Program1();
+
+      //  accessing name field from base class
+      Console.Write(student.name);
+      Console.ReadLine();
+    }
+  }
+}
+```
+
+Output
+```
+Sheeran
+```
+
+- The above code is in Assembly1
+- In the above example, we have created a class `StudentName` with a `private protected` field name.
+- Notice that we have inherited the `Program1` class from the `StudentName` class.
+- Since the `private protected` member can be accessed from derived classes within the same assembly, we are able to access `name` from the `Program1` class.
+
+Let's derive a class from `StudentName` in another assembly and try to access the `private protected` field name from it. 
+For example,
+```csharp
+// Code in Assembly2
+using System;
+//access Assembly1
+using Assembly1;
+
+namespace Assembly2 {
+
+  //derived class of StudentName
+  class Program : StudentName {
+    static void Main(string[] args) {
+      Program student = new Program();
+    
+      // accessing name field from Assembly1
+      Console.Write(student.name);
+      Console.ReadLine();
+     }
+  }
+}
+```
+
+- The above code is in Assembly2
+
+- In the above example, when we try to access the name field from the derived class of StudentName, we get an error.
+
+O/p
+```
+Error    CS0122    'StudentName.name' is inaccessible due to its protection level    
+```
+
+- This is because the `name` field is in `Assembly1` and the derived class is in `Assembly2`.
+
+|Note:                                                                                                                                           |
+|------------------------------------------------------------------------------------------------------------------------------------------------|
+|We can also use access modifiers with types (classes, interface, etc). However, we can only use types with public and internal access modifiers.|
+
