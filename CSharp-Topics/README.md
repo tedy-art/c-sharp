@@ -11,8 +11,8 @@
 | 4    | Methods                            | Defining methods, return types, parameters, method overloading              | complete	 |
 | 5    | Object-Oriented Programming (OOP)  | Classes, objects, constructors, fields, properties, methods                 | complete     |
 | 6    | Access Modifiers                   | Public private, protected, internal                                         | complete     |
-| 7    | C# Properties (Get and Set)        | get, set methods                                                            | Incomplete   |
-| 8    | Inheritance and Polymorphism       | Base and derived classes, method overriding, polymorphism                   | Incomplete   |
+| 7    | C# Properties (Get and Set)        | get, set methods                                                            | complete     |
+| 8    | pillars of OOP's                   | encapsulation, abstraction, inheritance, and polymorphism                   | Incomplete   |
 | 9    | Interfaces and Abstract Classes    | Defining and implementing interfaces, abstract classes                      | Incomplete   |
 | 10   | Exception Handling                 | Try-catch blocks, custom exceptions                                         | Incomplete   |
 | 11   | Collections                        | Arrays, lists, dictionaries, queues, stacks                                 | Incomplete   |
