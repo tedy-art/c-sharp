@@ -11,17 +11,18 @@
 | 4    | Methods                            | Defining methods, return types, parameters, method overloading              | complete	 |
 | 5    | Object-Oriented Programming (OOP)  | Classes, objects, constructors, fields, properties, methods                 | complete     |
 | 6    | Access Modifiers                   | Public private, protected, internal                                         | complete     |
-| 7    | Inheritance and Polymorphism       | Base and derived classes, method overriding, polymorphism                   | Incomplete   |
-| 8    | Interfaces and Abstract Classes    | Defining and implementing interfaces, abstract classes                      | Incomplete   |
-| 9    | Exception Handling                 | Try-catch blocks, custom exceptions                                         | Incomplete   |
-| 10    | Collections                        | Arrays, lists, dictionaries, queues, stacks                                 | Incomplete   |
-| 11   | LINQ Basics                        | Introduction to LINQ, basic queries, filtering, ordering                    | Incomplete   |
-| 12   | File I/O                           | Reading from and writing to files                                           | Incomplete   |
-| 13   | Introduction to .NET Framework     | Overview, Common Language Runtime (CLR), .NET libraries                     | Incomplete   |
-| 14   | Basic Windows Forms Applications   | Creating a simple GUI application                                           | Incomplete   |
-| 15   | Introduction to ASP.NET            | Basics of web development with ASP.NET                                      | Incomplete   |
-| 16   | Debugging and Testing              | Debugging tools, unit testing with MSTest or NUnit                          | Incomplete   |
-| 17   | Project                            | Simple project to apply learned concepts (e.g., a console application)      | Incomplete   |
+| 7    | C# Properties (Get and Set)        | get, set methods                                                            | Incomplete   |
+| 8    | Inheritance and Polymorphism       | Base and derived classes, method overriding, polymorphism                   | Incomplete   |
+| 9    | Interfaces and Abstract Classes    | Defining and implementing interfaces, abstract classes                      | Incomplete   |
+| 10   | Exception Handling                 | Try-catch blocks, custom exceptions                                         | Incomplete   |
+| 11   | Collections                        | Arrays, lists, dictionaries, queues, stacks                                 | Incomplete   |
+| 12   | LINQ Basics                        | Introduction to LINQ, basic queries, filtering, ordering                    | Incomplete   |
+| 13   | File I/O                           | Reading from and writing to files                                           | Incomplete   |
+| 14   | Introduction to .NET Framework     | Overview, Common Language Runtime (CLR), .NET libraries                     | Incomplete   |
+| 15   | Basic Windows Forms Applications   | Creating a simple GUI application                                           | Incomplete   |
+| 16   | Introduction to ASP.NET            | Basics of web development with ASP.NET                                      | Incomplete   |
+| 17   | Debugging and Testing              | Debugging tools, unit testing with MSTest or NUnit                          | Incomplete   |
+| 18   | Project                            | Simple project to apply learned concepts (e.g., a console application)      | Incomplete   |
 
 ---
 # 1. What is C#??
