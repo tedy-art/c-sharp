@@ -2064,6 +2064,76 @@ Liam
 4. polymorphism
 
 
+- To inherit from a class, use the `:` Symbol.
+
+## `this ` Keyword
+- this keyword refers to the current instance of a class.
+- i.g.
+```csharp
+using System;
+
+namespace ThisKeyword
+{
+    class Test
+    {
+        int num;
+
+        Test(int num)
+        {
+            // this.num refers to the instance field
+            this.num = num;
+            Console.WriteLine("Object of this : " + this);
+        }
+
+        static void Main(string[] args)
+        {
+            Test t1 = new Test(4);
+            Console.WriteLine("Object of t1 : "+ t1);
+            Console.ReadLine();
+        }
+    }
+}
+```
+O/p
+```
+Object of this : ThisKeyword.Test
+Object of t1 : ThisKeyword.Test
+```
+
+## `static` Keyword:
+- In C#, if we use a static keyword with class members, then there will be a single copy of the type member.
+- And, all objects of the class share a single copy instead of creating individual copies.
+
+
+Ex.
+```csharp
+using System;
+
+namespace StaticKeyword {
+
+  class Student {
+
+    // static variable
+    public static string department = "Computer Science";
+  }
+
+  class Program {
+    static void Main(string[] argos) {
+    
+      // access static variable
+      Console.WriteLine("Department: " + Student.department);
+     
+      Console.ReadLine();
+    }
+  }
+}
+```
+o/p:
+```
+Department: Computer Science
+```
+
+
 ## 1. inheritance
 - inheritance is a fundamental concept in OOP that allows a class(called the derived/child/sub class) to inherit proprtties and behaviours(methods) from another class(called the base/super class).
 - this mechanism enables code reuse, creates a natural hierarchy, and established an "Is-a" relationship between classes.
@@ -2278,9 +2348,9 @@ Base Method
 Derived Method 2
 ```
 
-## 5. hybrid Inheritace
+## 5. hybrid Inheritance
 - Hybrid Inheritance is a combination of two or more than types of inheritance.
-- Since C# dose not support multiple inheritance directly, Hybrid Inheritance is typically achived thrugh interfaces.
+- Since C# dose not support multiple inheritance directly, Hybrid Inheritance is typically achived through interfaces.
 
 Ex.
 ```
@@ -2325,4 +2395,95 @@ O/p:
 ```
 Base Method
 Interface Method
+```
+
+## 2. abstraction:
+- Abstraction is one of the fundamental principle of OOP.
+- It involves hiding the complex implementation details of an object nd exposing only the necessary features to the outside world.
+- Abstraction allows programmers to focus on what an object dose rather than how it dose it.
+- This helps in reducing complexity and increasing the efficiency of the code.
+
+### Key Concepts:
+1. Abstract classes
+2. Interfaces
+
+
+### 1. Abstract classes:
+- An Abstract class connot be instantiated directly and is meant to be aubclassed.
+- It can contain abstract method(method without implementation) as well as concrete method(method with implementation).
+- the subclasses of the abstract class are responsible for providing implementations for the abstract method.
+
+### 1.2. Abstract Method:
+- Can only be used in an abstract class and it does not have a body.
+- The body is provided by the derived by the derived class(inherited from).
+
+An abstract class can have both abstract and regular method:
+
+Ex.
+```
+abstract class Animal
+{
+    public abstract void animalSound();
+
+    public void sleep()
+    {
+        Console.WriteLine("Zzz");
+    }
+}
+```
+
+| Note                                                                                |
+|-------------------------------------------------------------------------------------|
+| from the example above, it is `not possible` to create an object of an `Animal` class.|
+
+Ex.
+```
+Animal obj = new Animal();
+```
+- To access the abstract class, it must be inherited from another class.
+
+Ex.
+```
+using System;
+
+namespace MyApplication
+{
+  // Abstract class
+  abstract class Animal
+  {
+    // Abstract method (does not have a body)
+    public abstract void animalSound();
+    // Regular method
+    public void sleep()
+    {
+      Console.WriteLine("Zzz");
+    }
+  }
+  
+  // Derived class (inherit from Animal)
+  class Pig : Animal
+  {
+    public override void animalSound()
+    {
+      // The body of animalSound() is provided here
+      Console.WriteLine("The pig says: wee wee");
+    }
+  }
+
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      Pig myPig = new Pig();  // Create a Pig object
+      myPig.animalSound();
+      myPig.sleep();
+    }
+  }
+}
+```
+
+O/p
+```
+The pig says: wee wee
+Zzz
 ```
