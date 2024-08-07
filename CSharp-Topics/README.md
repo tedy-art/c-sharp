@@ -2438,7 +2438,7 @@ abstract class Animal
 
 Ex.
 ```
-Animal obj = new Animal();
+Animal obj = new Animal(); // error
 ```
 - To access the abstract class, it must be inherited from another class.
 
