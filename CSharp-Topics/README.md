@@ -1960,7 +1960,322 @@ Error    CS0122    'StudentName.name' is inaccessible due to its protection leve
 
 - This is because the `name` field is in `Assembly1` and the derived class is in `Assembly2`.
 
-|Note:                                                                                                                                           |
-|------------------------------------------------------------------------------------------------------------------------------------------------|
-|We can also use access modifiers with types (classes, interface, etc). However, we can only use types with public and internal access modifiers.|
+| Note:                                                                                                                                           |
+|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| We can also use access modifiers with types (classes, interface, etc). However, we can only use types with public and internal access modifiers.|
 
+## 9. properties(get and set):
+### Properties and Encapsulation
+- Before we start to explain properties, you should have a basic understanding of "Encapsulation".
+
+- The meaning of Encapsulation, is to make sure that "sensitive" data is hidden from users. To achieve this, you must:
+    - declare fields/variables as private
+    - provide public get and set methods, through properties, to access and update the value of a private field Properties
+
+ 
+Properties:
+- You learned from the previous chapter that private variables can only be accessed within the same class (an outside class has no access to it). However, sometimes we need to access them - and it can be done with properties.
+- A property is like a combination of a variable and a method, and it has two methods: a get and a set method:
+
+Example
+```csharp
+class Person
+{
+  private string name; // field
+
+  public string Name   // property
+  {
+    get { return name; }   // get method
+    set { name = value; }  // set method
+  }
+} 
+```
+ 
+#### Example explained
+- The Name property is associated with the name field. It is a good practice to use the same name for both the property and the private field, but with an uppercase first letter.
+- The get method returns the value of the variable name.
+- The set method assigns a value to the name variable. The value keyword represents the value we assign to the property.
+- If you don't fully understand it, take a look at the example below.
+
+*Now we can use the Name property to access and update the private field of the Person class:**
+
+### Example
+```csharp
+class Person
+{
+  private string name; // field
+  public string Name   // property
+  {
+    get { return name; }
+    set { name = value; }
+  }
+}
+
+class Program
+{
+  static void Main(string[] args)
+  {
+    Person myObj = new Person();
+    myObj.Name = "Liam";
+    Console.WriteLine(myObj.Name);
+  }
+}
+```
+
+output:
+```
+Liam
+```
+
+### Automatic Properties (Short Hand)
+- C# also provides a way to use short-hand / automatic properties, where you do not have to define the field for the property, and you only have to write get; and set; inside the property.
+- The following example will produce the same result as the example above. The only difference is that there is less code:
+
+Example
+Using automatic properties:
+
+```csharp
+class Person
+{
+  public string Name  // property
+  { get; set; }
+}
+
+class Program
+{
+  static void Main(string[] args)
+  {
+    Person myObj = new Person();
+    myObj.Name = "Liam";
+    Console.WriteLine(myObj.Name);
+  }
+}
+```
+output:
+```
+Liam
+```
+
+## 8. pillars of OOP's:
+
+1. inheritance
+2. abstraction
+3. encapsulation
+4. polymorphism
+
+
+## 1. inheritance
+- inheritance is a fundamental concept in OOP that allows a class(called the derived/child/sub class) to inherit proprtties and behaviours(methods) from another class(called the base/super class).
+- this mechanism enables code reuse, creates a natural hierarchy, and established an "Is-a" relationship between classes.
+
+Types of inheritance:
+1. Single Inheritance
+2. Multilevel Inheritance
+3. multiple Inheritance
+4. Hirarchical Inheritance
+5. hybrid Inheritace
+
+## 1. Single Inheritance
+- A class inherits from one base class.
+- this is the most common from of inheritace.
+
+Ex.
+```csharp
+using System;
+
+namespace SingleInheritance
+{
+    public class Animal
+    {
+        public void Eat()
+        {
+            Console.WriteLine("Eating...");
+        }
+    }
+
+    public class Dog : Animal
+    {
+        public void Bark()
+        {
+            Console.WriteLine("Barking...");
+        }
+    }
+
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            Dog dog = new Dog();
+            dog.Eat();
+            dog.Bark();
+        }
+    }
+}
+```
+
+O/P
+```
+Eating...
+Barking...
+```
+
+## 2.Multilevel Inheritance
+- In multilevel Inheritance, a class is derived class, creating a chain inheritance.
+
+Ex.
+```csharp
+using System;
+
+namespace MultilevelInheritance
+{
+    public class BaseClass
+    { 
+        public void BaseMethod()
+        {
+            Console.WriteLine("Base Method");
+        }
+    }
+
+    public class IntermediateClass : BaseClass
+    {
+        public void IntermediateMethod()
+        {
+            Console.WriteLine("Intermediate Method");
+        }
+    }
+
+    public class DerivedClass : IntermediateClass
+    { 
+        public void DerivedMethod()
+        {
+            Console.WriteLine("Derived Method");
+        }
+    }
+
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            DerivedClass obj = new DerivedClass();
+            obj.BaseMethod();
+            obj.IntermediateMethod();
+            obj.DerivedMethod();
+        }
+    }
+}
+```
+
+O/p
+```
+Base Method
+Intermediate Method
+Derived Method
+```
+
+## 3. Multiple Inheritance
+- C# dose not support multiple Inheritance directly(i.e. class connot inherit from more than one class).
+- however, it supports multiple inheritance through interfaces, where a class can implement multiple interfaces.
+
+```csharp
+using System;
+
+namespace MultipleInheritance
+{
+    public interface IInterface1
+    {
+        void Method1();
+    }
+
+    public interface IInterface2
+    {
+        void Method2();
+    }
+
+    public class DerivedClass : IInterface1, IInterface2
+    {
+        public void Method1()
+        {
+            Console.WriteLine("Method 1");
+        }
+
+        public void Method2()
+        {
+            Console.WriteLine("Method 2");
+        }
+    }
+
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            DerivedClass obj = new DerivedClass();
+            obj.Method1();  // Outputs: Method 1
+            obj.Method2();  // Outputs: Method 2
+        }
+    }
+}
+```
+
+O/p:
+```
+Method 1
+Method 2
+```
+
+## 4. Hirarchical Inheritance
+- in Hirarchical Inheritance, multiple drived classes inherit from single base class.
+
+Ex.
+```csharp
+using System;
+
+namespace HierarchicalInheritance
+{
+    public class BaseClass
+    {
+        public void BaseMethod()
+        {
+            Console.WriteLine("Base Method");
+        }
+    }
+
+    public class DerivedClass1 : BaseClass
+    {
+        public void DerivedMethod1()
+        {
+            Console.WriteLine("Derived Method 1");
+        }
+    }
+
+    public class DerviedClass2: BaseClass
+    {
+        public void DerivedMethod2()
+        {
+            Console.WriteLine("Derived Method 2");
+        }
+    }
+
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            DerivedClass1 obj1 = new DerivedClass1();
+            obj1.BaseMethod();
+            obj1.DerivedMethod1();
+
+            DerviedClass2 obj2 = new DerviedClass2();
+            obj2.BaseMethod();
+            obj2.DerivedMethod2();
+        }
+    }
+}
+```
+O/p
+```
+Base Method
+Derived Method 1
+Base Method
+Derived Method 2
+```
+
+## 5. hybrid Inheritace
