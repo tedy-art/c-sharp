@@ -2279,3 +2279,15 @@ Derived Method 2
 ```
 
 ## 5. hybrid Inheritace
+- Hybrid Inheritance is a combination of two or more than types of inheritance.
+- Since C# dose not support multiple inheritance directly, Hybrid Inheritance is typically achived thrugh interfaces.
+
+Ex.
+```
+
+```
+
+O/p:
+```
+
+```
