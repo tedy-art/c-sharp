@@ -2487,3 +2487,153 @@ O/p
 The pig says: wee wee
 Zzz
 ```
+
+Ex2:
+```csharp
+using System;
+
+namespace abstractClassAndMethods
+{
+    // Abstract class
+    public abstract class Animal
+    {
+        // Abstract method(with no implementation)
+        public abstract void MakeSound();
+
+        // Concrete Method
+        public void Sleep()
+        {
+            Console.WriteLine("Sleeping..");
+        }
+    }
+
+    // Derived class(subclass) and inheriting abstract class
+    public class Dog : Animal
+    { 
+        // Providing implementation for the abstract class
+        public override void MakeSound()
+        {
+            Console.WriteLine("woof!");
+        }
+    }
+
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            Dog dog = new Dog();
+            dog.MakeSound();
+            dog.Sleep();
+        }
+    }
+}
+```
+
+O/p:
+```
+woof
+Sleeping...
+```
+
+## 2. Interfaces
+- An interface is a completely "abstract class", which can only contain abstract methods and properties(with empty bodies).
+- It contain declarations of methods, properties, events or indexers, but it dose not provide implementation.
+- A class or struct that implements an interface must provide implementations for all members declared in the interface.
+
+Ex.
+```csharp
+using System;
+
+namespace InterfaceAbstraction
+{
+    // interface
+    public interface IAnimal
+    {
+        void MakeSound();
+        void Sleep();
+    }
+
+    // class implementing the interface
+    public class Cat : IAnimal
+    {
+        public void MakeSound()
+        {
+            Console.WriteLine("Meow!");
+        }
+
+        public void Sleep()
+        {
+            Console.WriteLine("Sleeping...");
+        }
+    }
+    public class Program
+    { 
+        public static void Main(string[] args)
+        {
+            Cat cat = new Cat();
+            cat.MakeSound();
+            cat.Sleep();
+            Console.ReadLine();
+        }
+    }
+}
+```
+
+o/p:
+```
+Meow!
+Sleeping...
+```
+
+### Multiple Interfaces:
+- to implement multiple interfaces, separate them with a comma:
+Ex>
+```csharp
+using System;
+
+namespace MyApplication
+{
+    interface IFirstInterface
+    {
+        void myMethod(); // interface method
+    }
+
+    interface ISecondInterface
+    {
+        void myOtherMethod(); // interface method
+    }
+
+    // Implement multiple interfaces
+    class DemoClass : IFirstInterface, ISecondInterface
+    {
+        public void myMethod()
+        {
+            Console.WriteLine("Some text..");
+        }
+        public void myOtherMethod()
+        {
+            Console.WriteLine("Some other text...");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            DemoClass myObj = new DemoClass();
+            myObj.myMethod();
+            myObj.myOtherMethod();
+            Console.ReadLine();
+        }
+    }
+}
+```
+
+O/p:
+```
+Some text...
+Some other text...
+```
+
+
+## 3. Encapsulation
