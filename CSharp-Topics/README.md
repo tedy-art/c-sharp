@@ -2637,3 +2637,332 @@ Some other text...
 
 
 ## 3. Encapsulation
+- Encapsulation is defined as the wrapping up of data and information under a single unit.
+- It is the mechanism that binds together the data and the functions that manipulate them.
+- In a different way, encapsulation is a protective shield that prevents the data from being accessed by the code outside this shield.
+
+- **Technically in encapsulation**, the variables or data of a class are hidden from any other class and can be accessed only through any member function of its own class in which they are declared.
+- **As in encapsulation**, the data in a class is hidden from other classes, so it is also known as data-hiding.
+- **Encapsulation can be achieved by:** Declaring all the variables in the class as private and using C# Properties in the class to set and get the values of variables.
+
+```csharp
+using System;
+
+namespace EncapsulationExample
+{
+    public class DemoEncap
+    {
+        // private variables declared
+        // these can only be accessed by
+        // public methods of class
+        private string studentName;
+        private int studentAge;
+
+        // using accessors to get and
+        // set the value of studentName
+        public string Name
+        {
+            get { return studentName; }
+            set { studentName = value; }
+        }
+
+        // using accessors to get and
+        // set the value of studentAge
+        public int Age
+        {
+            get { return studentAge; }
+            set { studentAge = value; }
+        }
+    }
+
+    // Driver Class
+    class GFG
+    {
+        // Main Method
+        static public void Main()
+        {
+            // creating object
+            DemoEncap obj = new DemoEncap();
+
+            // calls set accessor of the property Name,
+            // and pass "Ankita" as value of the
+            // standard field 'value'
+            obj.Name = "Ankita";
+
+            // calls set accessor of the property Age,
+            // and pass "21" as value of the
+            // standard field 'value'
+            obj.Age = 21;
+
+            // Displaying values of the variables
+            Console.WriteLine("Name: " + obj.Name);
+            Console.WriteLine("Age: " + obj.Age);
+        }
+    }
+}
+```
+O/p:
+```
+Name: Ankita
+Age: 21
+```
+
+Advantages of Encapsulation:
+- **Data Hiding:** The user will have no idea about the inner implementation of the class. It will not be visible to the user that how the class is stored values in the variables. He only knows that we are passing the values to accessors and variables are getting initialized to that value.
+- **Increased Flexibility:** We can make the variables of the class as read-only or write-only depending on our requirement. If we wish to make the variables as read-only then we have to only use Get Accessor in the code. If we wish to make the variables as write-only then we have to only use Set Accessor.
+- **Reusability:** Encapsulation also improves the re-usability and easy to change with new requirements.
+- **Testing code is easy:** Encapsulated code is easy to test for unit testing.
+
+Ex.2
+```csharp
+using System;
+
+namespace BankAccountApp
+{
+    public class BankAccount
+    {
+        private decimal balance;
+
+        public BankAccount(decimal initialBalance)
+        {
+            balance = initialBalance;
+        }
+
+        public void Deposit(decimal amount)
+        {
+            balance += amount;
+        }
+
+        public void Withdraw(decimal amount)
+        {
+            if (balance >= amount)
+            {
+                balance -= amount;
+            }
+            else
+            {
+                Console.WriteLine("Insufficient funds.");
+            }
+        }
+
+        public decimal GetBalance()
+        {
+            return balance;
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            BankAccount myAccount = new BankAccount(1000);
+
+            myAccount.Deposit(500);
+            Console.WriteLine("Balance: " + myAccount.GetBalance());
+
+            myAccount.Withdraw(2000);
+            Console.WriteLine("Balance: " + myAccount.GetBalance());
+
+            myAccount.Withdraw(500);
+            Console.WriteLine("Balance: " + myAccount.GetBalance());
+
+            Console.ReadLine();
+        }
+    }
+}
+```
+
+O/p:
+```
+Balance: 1500
+Insufficient funds.
+Balance: 1500
+Balance: 1000
+```
+
+## 4.Polymorphism
+- Polymorphism means "many forms", and it occurs when we have many classes that are related to each other by inheritance.
+
+There are two types of polymorphism:
+1. Compile Time Polymorphism(static polymorphism)
+2. Runtime Polymorphism(Dynamic Polymorphism)
+
+1. Compile Time Polymorphism:
+- It is achived by method overloading and operator overloading.
+- it is also known as static binding or early binding.
+
+2. Runtime Polymorphism:
+- Runtime polymorphism is achived by method overriding.
+- Runtime polymorphism is also known as dynamic binding or late binding.
+
+**1. Method Overloading**
+- Method Overloading occurs when multiple methods in the same class have the same name but differ in the number or type of parameters. 
+- This allows you to define multiple behaviors for the same method name depending on the input parameters.
+
+**2. Operator Overloading**
+- Operator Overloading allows you to redefine the behavior of standard operators (like +, -, *, etc.) for user-defined types such as classes and structs.
+- This can make operations on these types more intuitive and readable.
+
+Ex. of method overloading
+```csharp
+using System;
+
+namespace methodOverloading
+{
+    public class Calculator
+    {
+        // Method to add two integers
+        public int Add(int a, int b)
+        {
+            return a + b;
+        }
+
+        // Overloaded method to add three integers
+        public int Add(int a, int b, int c)
+        {
+            return a + b + c;
+        }
+
+        // Overloaded method to add two doubles
+        public double Add(double a, double b)
+        {
+            return a + b;
+        }
+    }
+
+    public class Program
+    {
+        public static void Main()
+        {
+            Calculator calc = new Calculator();
+
+            // Calling different overloaded versions of the Add method
+            Console.WriteLine(calc.Add(2, 3));        // Outputs: 5
+            Console.WriteLine(calc.Add(2, 3, 4));     // Outputs: 9
+            Console.WriteLine(calc.Add(2.5, 3.5));    // Outputs: 6.0
+        }
+    }
+}
+```
+O/p
+```
+5
+9
+6
+```
+
+Ex. Operator Overloading
+```csharp
+using System;
+
+namespace OperatorOverloading
+{
+    public class Complex
+    {
+        public double Real { get; set; }
+        public double Imaginary { get; set; }
+
+        // Constructor
+        public Complex(double real, double imaginary)
+        {
+            Real = real;
+            Imaginary = imaginary;
+        }
+
+        // Overloading the + operator to add two Complex objects
+        public static Complex operator +(Complex c1, Complex c2)
+        {
+            return new Complex(c1.Real + c2.Real, c1.Imaginary + c2.Imaginary);
+        }
+
+        // Overriding the ToString method to display the complex number
+        public override string ToString()
+        {
+            return $"{Real} + {Imaginary}i";
+        }
+    }
+
+    public class Program
+    {
+        public static void Main()
+        {
+            Complex c1 = new Complex(1.5, 2.5);
+            Complex c2 = new Complex(3.0, 4.0);
+
+            // Using the overloaded + operator to add two complex numbers
+            Complex result = c1 + c2;
+
+            Console.WriteLine(result);  // Outputs: 4.5 + 6.5i
+        }
+    }
+}
+```
+
+O/p
+```
+4.5 + 6.5i
+```
+
+Ex. Method overriding
+```
+using System;
+
+
+namespace OperatorOverriding
+{
+    public class Animal
+    {
+        // Virtual method in the base class
+        public virtual void MakeSound()
+        {
+            Console.WriteLine("The animal makes a sound");
+        }
+    }
+
+    public class Dog : Animal
+    {
+        // Overriding the MakeSound method in the derived class
+        public override void MakeSound()
+        {
+            Console.WriteLine("The dog says: Woof!");
+        }
+    }
+
+    public class Cat : Animal
+    {
+        // Overriding the MakeSound method in the derived class
+        public override void MakeSound()
+        {
+            Console.WriteLine("The cat says: Meow!");
+        }
+    }
+
+    public class Program
+    {
+        public static void Main()
+        {
+            // Base class reference pointing to a derived class object
+            Animal myAnimal;
+
+            // Creating a Dog object and assigning it to an Animal reference
+            myAnimal = new Dog();
+            myAnimal.MakeSound();  // Outputs: The dog says: Woof!
+
+            // Creating a Cat object and assigning it to an Animal reference
+            myAnimal = new Cat();
+            myAnimal.MakeSound();  // Outputs: The cat says: Meow!
+
+            // Creating an Animal object and calling its method
+            myAnimal = new Animal();
+            myAnimal.MakeSound();  // Outputs: The animal makes a sound
+        }
+    }
+}
+```
+
+O/p
+```
+The dog says: Woof!
+The cat says: Meow!
+The animal makes a sound
+```
