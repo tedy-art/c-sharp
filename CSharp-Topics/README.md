@@ -13,7 +13,7 @@
 | 6    | Access Modifiers                   | Public private, protected, internal                                         | complete     |
 | 7    | Properties (Get and Set)           | get, set methods                                                            | complete     |
 | 8    | pillars of OOP's                   | encapsulation, abstraction, inheritance, and polymorphism                   | complete     |
-| 9    | Exception Handling                 | Try-catch blocks, custom exceptions                                         | Incomplete   |
+| 9    | Exception Handling                 | Try-catch blocks, custom exceptions                                         | complete     |
 | 10   | Collections                        | Arrays, lists, dictionaries, queues, stacks                                 | Incomplete   |
 | 11   | LINQ Basics                        | Introduction to LINQ, basic queries, filtering, ordering                    | Incomplete   |
 | 12   | File I/O                           | Reading from and writing to files                                           | Incomplete   |
@@ -3092,3 +3092,97 @@ Unhandled Exception: System.DivideBy
 ```
 
 ## Custom Exceptions:
+- C# allows us to create user-defined or custom exception. 
+- It is used to make the meaningful exception. 
+- To do this, we need to inherit Exception class.
+
+```
+using System;
+
+public class InvalidAgeException : Exception
+{
+    // Constructor that accepts just the message
+    public InvalidAgeException(string message)
+        : base(message)
+    {
+    }
+
+    // Optional: Constructor that accepts the message and an inner exception
+    public InvalidAgeException(string message, Exception inner)
+        : base(message, inner)
+    {
+    }
+}
+
+public class UserValidation
+{
+    public static void ValidateAge(int age)
+    {
+        if (age < 18)
+        {
+            throw new InvalidAgeException("Sorry, age must be 18 or older.");
+        }
+        else
+        {
+            Console.WriteLine("Age is valid.");
+        }
+    }
+}
+
+public class Program
+{
+    public static void Main()
+    {
+        try
+        {
+            Console.Write("Enter your age: ");
+            int age = Convert.ToInt32(Console.ReadLine());
+            UserValidation.ValidateAge(age);
+        }
+        catch (InvalidAgeException ex)
+        {
+            Console.WriteLine($"Custom Exception: {ex.Message}");
+        }
+
+        Console.WriteLine("Program ended.");
+    }
+}
+```
+
+O/p:
+```
+Enter your age: 16
+Custom Exception: Sorry, age must be 18 or older.
+Program ended.
+
+Enter your age: 20
+Age is valid.
+Program ended.
+
+```
+
+
+## Key Benefits of Custom Exceptions:
+**Clarity:** Custom exceptions provide more meaningful error messages, making your code easier to understand and debug.
+**Separation of Concerns:** They allow you to differentiate between different types of errors and handle them appropriately.
+**Extensibility:** You can add custom properties and methods to convey more information about the error, which can be useful for logging or user feedback.
+
+## throw Keyword:
+- In C#, the keyword "throw" is used to create and throw an exception object to indicate an error that's occurred while running a program.
+- The runtime then searches for the most compatible exception handler. 
+
+- You can throw exceptions for errors that can't be trapped within the normal flow of the program, such as:
+    - File open errors
+    - IO errors
+    - Zero divisors
+    - Invalid parameter values
+    - Inappropriate object calls
+    - Arguments that cause an exception
+
+
+# 10 Collections
+- Arrays
+- lists
+- dictionaries
+- queues
+- stacks
