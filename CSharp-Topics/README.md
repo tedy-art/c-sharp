@@ -3181,8 +3181,265 @@ Program ended.
 
 
 # 10 Collections
-- Arrays
-- lists
-- dictionaries
-- queues
-- stacks
+## What Are Collections in C#?
+- C# collections are made to more effectively organize, store, and modify comparable data.
+- Adding, deleting, discovering, and inserting data into the collection are all examples of data manipulation.
+- These classes support stacks, queues, lists, and hash tables.
+- Most collection classes implement the same interfaces.
+
+- There are several applications for collection classes, such as dynamic memory allocation for elements and index-based access to lists of objects.
+- These classes construct collections of objects of the Object class, the building blocks of all other C# data types.
+
+## What Are the Types of Collections in C#?
+- Collections are majorly classified into two types.
+1. Generic Collections
+2. Non-Generic Collections
+
+## 1. Generic Collections
+- A `Generic collection` provides the type safety without derivation from a basic collection type and the implementation of type-specific members.
+- The Generic Collection classes are found in the namespace `System.Collections.Generics`. 
+- Internally, Generic Collections store elements in arrays of their respective types.
+
+- Generic collections are often classified into five types.
+1. List
+2. Dictionary
+3. Sorted List
+4. stacks
+5. Queues
+
+### 1. List:
+- In Generic List, we have to specify a data type to its contents, and all elements will have the same datatype.
+```csharp
+using System;
+using System.Collections.Generic;
+
+namespace genericList
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<int> GenericList = new List<int>();
+            GenericList.Add(30);
+            GenericList.Add(60);
+            GenericList.Add(90);
+            GenericList.Add(120);
+
+            foreach(int x in GenericList)
+            {
+                Console.WriteLine(x);
+            }
+        }
+    }
+}
+```
+
+O/p:
+```
+30
+60
+90
+120
+```
+
+### 2. Dictionary
+- Dictionaries usully store data in key-value pairs, and we have to specify both data types beforhead.
+
+```
+using System;
+using System.Collections.Generic;
+
+namespace GenericDictionary
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Dictionary<int, string> GenericDictionary = new Dictionary<int, string>();
+            GenericDictionary.Add(1, "soda");
+            GenericDictionary.Add(2, "Burger");
+            GenericDictionary.Add(3, "Fries");
+            GenericDictionary.Add(4, "Onion Rings");
+            foreach(KeyValuePair<int, string> kvp in GenericDictionary)
+            {
+                Console.WriteLine(kvp.Key + " " + kvp.Value);
+            }
+        }
+    }
+}
+```
+
+O/p:
+```
+1 soda
+2 Burger
+3 Fries
+4 Onion Rings
+```
+
+### 3. Sorted List
+- A sorted list also stores a key-value pair and automatically sorts its elements in ascending order based on their keys.
+- In the generic Sorted list, we have to specify the datatypes of its content beforehand.
+
+```csharp
+using System;
+using System.Collections.Generic;
+
+namespace genericSortedList
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            SortedList<string, string> GenericSortedList = new SortedList<string, string>();
+            GenericSortedList.Add("American", "Burger");
+            GenericSortedList.Add("Lime", "Soda");
+            GenericSortedList.Add("French", "Fries");
+            GenericSortedList.Add("Onion", "Rings");
+
+            foreach(KeyValuePair<string, string> kvp in GenericSortedList)
+            {
+                Console.WriteLine(kvp.Key + " " + kvp.Value);
+            }
+        }
+    }
+}
+```
+O/p:
+```
+American Burger
+French Fries
+Lime Soda
+Onion Rings
+```
+
+### 4. Stack
+- Values are kept in Stack using LIFO (Last In First Out).
+- It offers the Push() and Pop() & Peek() methods to add and retrieve values, respectively. 
+- In generic Stack, we have to specify the datatypes of its content beforehand.
+
+Code:
+```csharp
+using System;
+using System.Collections.Generic;
+
+namespace genericStack
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Stack<string> steak = new Stack<string>();
+            steak.Push("Rare");
+            steak.Push("Medium Rare");
+            steak.Push("Medium");
+            steak.Push("Well Done");
+
+            foreach (string s in steak)
+            {
+                Console.WriteLine(s);
+            }
+        }
+    }
+}
+```
+O/p:
+```
+Well Done
+Medium
+Medium Rare
+Rare
+```
+
+### 5. Queue
+- Values are kept in a queue in a `FIFO` fashion (First In, First Out).
+- The sequence in which the values were inserted is preserved.
+- It offers the `Enqueue()` and `Dequeue()` methods to add and remove values from the collection.
+- In the generic `queue`, we have to specify the datatypes of its content beforehand.
+
+
+Code:
+```
+using System;
+using System.Collections.Generic;
+
+namespace genericQueue
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Queue<string> GenericQueue = new Queue<string>();
+            GenericQueue.Enqueue("Mark");
+            GenericQueue.Enqueue("Bill");
+            GenericQueue.Enqueue("Xaviar");
+            GenericQueue.Enqueue("Michael");
+
+            foreach(string s in GenericQueue)
+            {
+                Console.WriteLine(s);
+            }
+        }
+    }
+}
+```
+O/p
+```
+Mark
+Bill
+Xaviar
+Michael
+```
+
+## 2. Non-Generic Collections
+- Non-generic collections are specialized data storage and retrieval classes that handle stacks, queues, lists, and hash tables.
+- The `System.Collections` namespace contains the `Non-generic` Collection classes.
+- Non-generic collections store elements in object arrays internally, allowing them to hold any data type.
+
+- Non-Generic collections are often classified into five types.
+1. ArrayList
+2. HashTable
+3. SortedList
+4. Stack
+5. Queue
+
+
+### 1. ArrayList:
+- The array's size might change during use since it is dynamic, which implies it is not static.
+- It offers functions that are comparable to those in the generic List class.
+
+Code:
+```csharp
+using System;
+using System.Collections;
+
+namespace nonGenericArrayList
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ArrayList NonGenericArrayList = new ArrayList();
+            string str = "Like, Share, Subscribe";
+            int x = 11;
+            DateTime d = DateTime.Parse("3-dec-1998");
+
+            NonGenericArrayList.Add(str);
+            NonGenericArrayList.Add(x);
+            NonGenericArrayList.Add(d);
+
+            foreach(object o in NonGenericArrayList)
+            {
+                Console.WriteLine(o);
+            }
+        }
+    }
+}
+```
+
+O/p:
+```
+Like, Share, Subscribe
+11
+03/12/1998 12:00:00 AM
+```
