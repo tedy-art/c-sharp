@@ -3206,6 +3206,10 @@ Program ended.
 3. Sorted List
 4. stacks
 5. Queues
+6. HashSet
+7. LinkedList
+8. SortedDictionary
+9. SortedSet
 
 ### 1. List:
 - In Generic List, we have to specify a data type to its contents, and all elements will have the same datatype.
@@ -3391,6 +3395,188 @@ Xaviar
 Michael
 ```
 
+### 6. HashSet
+- A `HashSet` is a collection that stores unique elements and prevents duplicates.
+- It is part of the `System.Collections.Generic` namespace.
+- A `HashSet` is implemented using a hash table, making it very efficient for operations like adding, removing, and checking for the existence of elements, typically with O(1) time complexity.
+
+#### Key Features:
+- **Uniqueness**: No duplicate elements are allowed.
+- **Unordered**: Elements are not stored in any particular order.
+- **Fast Operations**: `Add`, `Remove`, and `Contains` are very fast due to the underlying hash table.
+
+#### Example:
+```csharp
+using System;
+using System.Collections.Generic;
+
+namespace genericHashSet
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            HashSet<int> numbers = new HashSet<int>();
+            numbers.Add(1);
+            numbers.Add(2);
+            numbers.Add(2); // Duplicate, will not be added
+            Console.WriteLine(numbers.Contains(1));
+            Console.WriteLine(numbers.Contains(3));
+
+            foreach (int i in numbers)
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+}
+```
+
+O/p:
+```
+True
+True
+1
+2
+3
+4
+5
+```
+
+- In this example, `numbers` will contain `{1, 2, 3, 4, 5}`.
+- The duplicate `2` will not be added again.
+
+### 7. LinkedList
+- A `LinkedList` is a collection that allows for efficient insertion and removal of elements.
+- It is a doubly linked list, meaning each node contains references to both the next and previous nodes.
+- Unlike arrays or `List<T>`, a `LinkedList` does not have an index-based access system, so you must navigate through the nodes sequentially.
+
+### Key Features:
+- **Dynamic Size**: Automatically adjusts its size.
+- **Efficient Insertions/Deletions**: Adding or removing elements at the beginning, end, or middle is efficient.
+- **No Indexing**: Access to elements is sequential, not by index.
+
+### Example:
+```csharp
+using System;
+using System.Collections.Generic;
+
+namespace genericLinkedList
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            LinkedList<int> list = new LinkedList<int>();
+            list.AddLast(1);
+            list.AddLast(2);
+            list.AddFirst(0);
+
+            foreach (int item in list)
+            {
+                Console.WriteLine(item);
+            }
+        }
+    }
+}
+```
+
+O/p:
+```
+0
+1
+2
+```
+
+- In this example, elements are added to the `LinkedList` in different positions, demonstrating how it dynamically manages its size and structure.
+
+### 8. SortedDictionary
+- A `SortedDictionary` in C# is a collection that stores key-value pairs in a sorted order by the keys.
+- It belongs to the `System.Collections.Generic` namespace and is similar to a regular dictionary, but with an added feature of automatic sorting based on the keys.
+
+### Key Features:
+- **Sorted by Keys**: The keys are automatically sorted.
+- **Efficient Lookup**: Provides efficient access to elements based on keys.
+- **No Duplicates**: Each key must be unique.
+
+### Example:
+```csharp
+using System;
+using System.Collections.Generic;
+
+namespace genericSortedDictionary
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            SortedDictionary<int, string> students = new SortedDictionary<int, string>();
+
+            students.Add(3, "John");
+            students.Add(1, "Alice");
+            students.Add(2, "Bob");
+
+            foreach(var student in students)
+            {
+                Console.WriteLine($"ID: {student.Key}, Name: {student.Value}");
+            }
+        }
+    }
+}
+```
+
+### Output:
+```
+ID: 1, Name: Alice
+ID: 2, Name: Bob
+ID: 3, Name: John
+```
+
+- In this example, the `SortedDictionary` automatically sorts the students by their IDs.
+
+### 9. SortedSet
+- A `SortedSet` in C# is a collection that stores elements in a sorted order and ensures that all elements are unique.
+- It is part of the `System.Collections.Generic` namespace and uses a binary search tree for internal storage, which provides efficient operations.
+
+### Key Features:
+- **Automatic Sorting**: Elements are always sorted in ascending order by default.
+- **Uniqueness**: No duplicate elements are allowed.
+- **Efficient Operations**: `Add`, `Remove`, and `Contains` operations have a time complexity of O(log n).
+
+### Example:
+```csharp
+using System;
+using System.Collections.Generic;
+
+namespace genericSortedSet
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            SortedSet<int> numbers = new SortedSet<int>();
+            numbers.Add(5);
+            numbers.Add(1);
+            numbers.Add(3);
+
+            foreach (int number in numbers)
+            {
+                Console.WriteLine(number); // Output: 1, 3, 5
+            }
+        }
+    }
+}
+```
+
+O/p:
+```
+1
+3
+5
+```
+
+- In this example, the `SortedSet` automatically sorts the elements in ascending order as they are added.
+
 ## 2. Non-Generic Collections
 - Non-generic collections are specialized data storage and retrieval classes that handle stacks, queues, lists, and hash tables.
 - The `System.Collections` namespace contains the `Non-generic` Collection classes.
@@ -3443,3 +3629,4 @@ Like, Share, Subscribe
 11
 03/12/1998 12:00:00 AM
 ```
+
