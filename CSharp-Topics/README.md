@@ -3630,3 +3630,204 @@ Like, Share, Subscribe
 03/12/1998 12:00:00 AM
 ```
 
+### 2. HashTable
+- A hash table data structure is made up of key-value pairs.
+- The hash values of the keys are compared to find the values.
+- It offers functions that are comparable to those in the generic dictionary class.
+
+Ex.
+```csharp
+using System;
+using System.Collections;
+
+namespace nonGenericHashTable
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Hashtable NonGenericHashTable = new Hashtable();
+            NonGenericHashTable.Add(1, "Soda");
+            NonGenericHashTable.Add(2, "Burger");
+            NonGenericHashTable.Add(3, "Fries");
+            NonGenericHashTable.Add(4, "Onion Rings");
+
+            foreach (DictionaryEntry h in NonGenericHashTable)
+            {
+                Console.WriteLine(h.Key + " " + h.Value);
+            }
+        }
+    }
+}
+```
+
+O/p:
+```
+4 Onion Rings
+3 Fries
+2 Burger
+1 Soda
+```
+
+### 3. Sorted List:
+- It is similar to the generic list, except we don't have to specify data types.
+
+Ex.
+```csharp
+using System;
+using System.Collections;
+
+
+namespace nonGenericSortedList
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            SortedList NonGenericSortedList = new SortedList();
+            NonGenericSortedList.Add("American", "Burger");
+            NonGenericSortedList.Add("Lime", "Soda");
+            NonGenericSortedList.Add("French", "Fries");
+            NonGenericSortedList.Add("Onion", "Rings");
+
+            foreach (DictionaryEntry d in NonGenericSortedList)
+            {
+                Console.WriteLine(d.Key+" "+d.Value);
+            }
+        }
+    }
+}
+```
+
+output:
+```
+American Burger
+French Fries
+Lime Soda
+Onion Rings
+```
+
+
+### 4. Stack
+- The `Stack` in the `System.Collections` namespace is a non-generic collection that follows the Last-In, First-Out (LIFO) principle.
+- This means that the last element added to the stack is the first one to be removed. 
+
+### Key Features of Non-Generic `Stack`
+
+- **LIFO Structure**: Elements are added and removed in a last-in, first-out order.
+- **Non-Generic**: Can store elements of any type, but lacks type safety, meaning you might need to cast objects when retrieving them.
+- **Dynamic Resizing**: Automatically resizes as needed when elements are added or removed.
+
+### Basic Operations
+
+1. **Creating a `Stack`**:
+
+```csharp
+using System;
+using System.Collections;
+
+public class Program
+{
+    public static void Main()
+    {
+        // Creating a Stack
+        Stack myStack = new Stack();
+    }
+}
+```
+
+2. **Pushing Items onto the Stack**:
+
+```csharp
+myStack.Push(10);
+myStack.Push("Hello");
+myStack.Push(true);
+```
+
+3. **Popping Items from the Stack**:
+
+```csharp
+// Removes and returns the top item (LIFO)
+object topItem = myStack.Pop();
+Console.WriteLine("Popped item: " + topItem);
+```
+
+4. **Peeking at the Top Item**:
+
+```csharp
+// Returns the top item without removing it
+object topItem = myStack.Peek();
+Console.WriteLine("Top item: " + topItem);
+```
+
+5. **Checking if the Stack Contains an Item**:
+
+```csharp
+if (myStack.Contains("Hello"))
+{
+    Console.WriteLine("'Hello' is in the stack.");
+}
+```
+
+6. **Iterating Over Items**:
+
+```csharp
+foreach (object item in myStack)
+{
+    Console.WriteLine(item);
+}
+```
+
+### Example Usage
+
+```csharp
+using System;
+using System.Collections;
+
+public class Program
+{
+    public static void Main()
+    {
+        // Create and initialize a new Stack.
+        Stack myStack = new Stack();
+        
+        // Pushing items onto the Stack.
+        myStack.Push(10);
+        myStack.Push("Hello");
+        myStack.Push(true);
+        
+        // Peeking at the top item without removing it.
+        Console.WriteLine("Top item is: " + myStack.Peek());
+        
+        // Popping items from the Stack.
+        Console.WriteLine("Popped item: " + myStack.Pop());
+        
+        // Checking if an item exists in the Stack.
+        if (myStack.Contains("Hello"))
+        {
+            Console.WriteLine("'Hello' is in the stack.");
+        }
+
+        // Iterating over the remaining items.
+        foreach (object item in myStack)
+        {
+            Console.WriteLine("Stack item: " + item);
+        }
+
+        // Output:
+        // Top item is: True
+        // Popped item: True
+        // 'Hello' is in the stack.
+        // Stack item: Hello
+        // Stack item: 10
+    }
+}
+```
+
+### Important Considerations
+
+- **Type Safety**: Since `Stack` is non-generic, you have to cast elements to the appropriate type when retrieving them, which can lead to runtime errors if the cast is incorrect.
+- **LIFO Behavior**: This collection is ideal for scenarios where you need to reverse the order of items or manage tasks that must be completed in the opposite order of their arrival.
+- **Performance**: Operations like `Push`, `Pop`, and `Peek` are generally very fast, with a time complexity of O(1).
+
+In modern C#, it's often preferable to use the generic `Stack<T>` from the `System.Collections.Generic` namespace for better type safety. However, the non-generic `Stack` is still useful in cases where you need to store objects of different types in the same collection.
