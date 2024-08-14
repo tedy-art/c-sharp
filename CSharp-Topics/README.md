@@ -14,15 +14,16 @@
 | 7    | Properties (Get and Set)           | get, set methods                                                            | complete     |
 | 8    | pillars of OOP's                   | encapsulation, abstraction, inheritance, and polymorphism                   | complete     |
 | 9    | Exception Handling                 | Try-catch blocks, custom exceptions                                         | complete     |
-| 10   | Collections                        | Arrays, lists, dictionaries, queues, stacks                                 | Incomplete   |
-| 11   | LINQ Basics                        | Introduction to LINQ, basic queries, filtering, ordering                    | Incomplete   |
-| 12   | File I/O                           | Reading from and writing to files                                           | Incomplete   |
-| 13   | Introduction to .NET Framework     | Overview, Common Language Runtime (CLR), .NET libraries                     | Incomplete   |
-| 14   | Basic Windows Forms Applications   | Creating a simple GUI application                                           | Incomplete   |
-| 15   | Introduction to ASP.NET            | Basics of web development with ASP.NET                                      | Incomplete   |
-| 16   | Debugging and Testing              | Debugging tools, unit testing with MSTest or NUnit                          | Incomplete   |
-| 17   | Practice                           | Practice                                                                    | Incomplete   |
-| 18   | Project                            | Simple project to apply learned concepts (e.g., a console application)      | Incomplete   |
+| 10   | Collections                        | Arrays, lists, dictionaries, queues, stacks                                 | complete     |
+| 11   | Enum                               | create, enum value, switch statement                                        | Complete     |
+| 12   | LINQ Basics                        | Introduction to LINQ, basic queries, filtering, ordering                    | Incomplete   |
+| 13   | File I/O                           | Reading from and writing to files                                           | Incomplete   |
+| 14   | Introduction to .NET Framework     | Overview, Common Language Runtime (CLR), .NET libraries                     | Incomplete   |
+| 15   | Basic Windows Forms Applications   | Creating a simple GUI application                                           | Incomplete   |
+| 16   | Introduction to ASP.NET            | Basics of web development with ASP.NET                                      | Incomplete   |
+| 17   | Debugging and Testing              | Debugging tools, unit testing with MSTest or NUnit                          | Incomplete   |
+| 18   | Practice                           | Practice                                                                    | Incomplete   |
+| 19   | Project                            | Simple project to apply learned concepts (e.g., a console application)      | Incomplete   |
 
 ---
 # 1. What is C#??
@@ -3969,4 +3970,180 @@ Queue item : True
 
 - In modern C#, it's often preferable to use the generic `Queue<T>` from the `System.Collections.Generic` namespace for better type safety and performance.
 - However, the non-generic `Queue` remains useful when you need to store objects of different types in the same collection.
+
+# 11. Enum
+- An enum is a special "class" that represents a group of constants (unchangeable/read-only variables).
+- To create an enum, use the enum keyword (instead of class or interface), and separate the enum items with a comma:
+
+```csharp
+using System;
+
+ namespace myApplication
+{
+    enum Level
+    {
+        Low,
+        Medium,
+        High
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Level myVar = Level.Medium;
+            Console.WriteLine(myVar);
+        }
+    }
+}
+```
+
+Output:
+```
+Medium
+```
+
+### Enum inside a Class
+- You can also have an enum inside a class:
+```csharp
+using System;
+
+namespace MyApplication
+{
+  class Program
+  {
+    enum Level
+    {
+      Low,
+      Medium,
+      High
+    }
+    static void Main(string[] args)
+    {
+      Level myVar = Level.Medium;
+      Console.WriteLine(myVar);
+    }
+  }
+}
+```
+Output:
+```
+Medium
+```
+
+### Enum Values:
+- By default, the 1st item of an enum has the value 10.
+- The 2nd has the value 1, and so on.
+
+- To get the integer value from an item, you must explicitly convert the item to an int:
+Ex.
+```csharp
+using System;
+
+namespace myApplication
+{
+    class Program
+    {
+        enum Months
+        {
+            January,
+            Februrary,
+            March,
+            April,
+            May,
+            June,
+            July
+        }
+
+        static void Main(string[] args)
+        {
+            int myNum = (int)Months.April;
+            Console.WriteLine(myNum);
+        }
+    }
+}
+```
+
+Output:
+```
+3
+```
+
+- You can also assign your own enum values, and the next items will update their numbers accordingly:
+```csharp
+using System;
+
+namespace MyApplication
+{
+  class Program
+  {
+    enum Months
+    {
+      January,    // 0
+      February,   // 1
+      March=6,    // 6
+      April,      // 7
+      May,        // 8
+      June,       // 9
+      July        // 10
+    }
+    static void Main(string[] args)
+    {
+      int myNum = (int) Months.April;
+      Console.WriteLine(myNum);
+    }
+  }
+}
+```
+Output:
+```
+7
+```
+
+### Enum in a Switch Statement
+- Enums are often used in switch statements to check for corresponding values:
+ex
+```csharp
+using System;
+
+namespace MyApplication
+{
+  class Program
+  {
+    enum Level
+    {
+      Low,
+      Medium,
+      High
+    }
+    static void Main(string[] args)
+    {
+      Level myVar = Level.Medium;
+      switch(myVar) 
+      {
+        case Level.Low:
+          Console.WriteLine("Low level");
+          break;
+        case Level.Medium:
+          Console.WriteLine("Medium level");
+          break;
+        case Level.High:
+          Console.WriteLine("High level");
+          break;
+      }    
+    }
+  }
+}
+```
+OUTPUT:
+```
+Medium level
+```
+
+
+# 12. LINQ Basics
+- Introduction to LINQ
+- basic queries
+- filtering
+- ordering
 
