@@ -3830,4 +3830,132 @@ public class Program
 - **LIFO Behavior**: This collection is ideal for scenarios where you need to reverse the order of items or manage tasks that must be completed in the opposite order of their arrival.
 - **Performance**: Operations like `Push`, `Pop`, and `Peek` are generally very fast, with a time complexity of O(1).
 
-In modern C#, it's often preferable to use the generic `Stack<T>` from the `System.Collections.Generic` namespace for better type safety. However, the non-generic `Stack` is still useful in cases where you need to store objects of different types in the same collection.
+- In modern C#, it's often preferable to use the generic `Stack<T>` from the `System.Collections.Generic` namespace for better type safety.
+- However, the non-generic `Stack` is still useful in cases where you need to store objects of different types in the same collection.
+
+
+### 5. Queue
+- The `Queue` in the `System.Collections` namespace is a non-generic collection that follows the First-In, First-Out (FIFO) principle.
+- This means that the first element added to the queue is the first one to be removed.
+
+### Key Features of Non-Generic `Queue`
+
+- **FIFO Structure**: Elements are added and removed in a first-in, first-out order.
+- **Non-Generic**: Can store elements of any type, but lacks type safety, meaning you might need to cast objects when retrieving them.
+- **Dynamic Resizing**: Automatically resizes as needed when elements are added or removed.
+
+### Basic Operations
+
+1. **Creating a `Queue`**:
+
+```csharp
+using System;
+using System.Collections;
+
+public class Program
+{
+    public static void Main()
+    {
+        // Creating a Queue
+        Queue myQueue = new Queue();
+    }
+}
+```
+
+2. **Enqueuing Items (Adding to the Queue)**:
+
+```csharp
+myQueue.Enqueue(10);
+myQueue.Enqueue("Hello");
+myQueue.Enqueue(true);
+```
+
+3. **Dequeuing Items (Removing from the Queue)**:
+
+```csharp
+// Removes and returns the item at the front of the queue (FIFO)
+object frontItem = myQueue.Dequeue();
+Console.WriteLine("Dequeued item: " + frontItem);
+```
+
+4. **Peeking at the Front Item**:
+
+```csharp
+// Returns the item at the front of the queue without removing it
+object frontItem = myQueue.Peek();
+Console.WriteLine("Front item: " + frontItem);
+```
+
+5. **Checking if the Queue Contains an Item**:
+
+```csharp
+if (myQueue.Contains("Hello"))
+{
+    Console.WriteLine("'Hello' is in the queue.");
+}
+```
+
+6. **Iterating Over Items**:
+
+```csharp
+foreach (object item in myQueue)
+{
+    Console.WriteLine(item);
+}
+```
+
+### Example Usage
+
+Here’s a full example demonstrating how to use a non-generic `Queue`:
+
+```csharp
+using System;
+using System.Collections;
+
+public class Program
+{
+    public static void Main()
+    {
+        // Create and initialize a new Queue.
+        Queue myQueue = new Queue();
+        
+        // Enqueuing items into the Queue.
+        myQueue.Enqueue(10);
+        myQueue.Enqueue("Hello");
+        myQueue.Enqueue(true);
+        
+        // Peeking at the front item without removing it.
+        Console.WriteLine("Front item is: " + myQueue.Peek());
+        
+        // Dequeuing items from the Queue.
+        Console.WriteLine("Dequeued item: " + myQueue.Dequeue());
+        
+        // Checking if an item exists in the Queue.
+        if (myQueue.Contains("Hello"))
+        {
+            Console.WriteLine("'Hello' is in the queue.");
+        }
+
+        // Iterating over the remaining items.
+        foreach (object item in myQueue)
+        {
+            Console.WriteLine("Queue item: " + item);
+        }
+
+        // Output:
+        // Front item is: 10
+        // Dequeued item: 10
+        // 'Hello' is in the queue.
+        // Queue item: Hello
+        // Queue item: True
+    }
+}
+```
+
+### Important Considerations
+
+- **Type Safety**: Since `Queue` is non-generic, you have to cast elements to the appropriate type when retrieving them, which can lead to runtime errors if the cast is incorrect.
+- **FIFO Behavior**: This collection is ideal for scenarios where you need to process items in the order they arrive, such as scheduling tasks or managing a line of requests.
+- **Performance**: Operations like `Enqueue`, `Dequeue`, and `Peek` are generally very fast, with a time complexity of O(1).
+
+In modern C#, it's often preferable to use the generic `Queue<T>` from the `System.Collections.Generic` namespace for better type safety and performance. However, the non-generic `Queue` remains useful when you need to store objects of different types in the same collection.
