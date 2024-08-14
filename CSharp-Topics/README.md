@@ -3952,10 +3952,21 @@ public class Program
 }
 ```
 
+Output:
+```
+Front item is : 10
+Dequeuing item : 10
+'Hello' is in the queue.
+Queue item : Hello
+Queue item : True
+```
+
 ### Important Considerations
 
 - **Type Safety**: Since `Queue` is non-generic, you have to cast elements to the appropriate type when retrieving them, which can lead to runtime errors if the cast is incorrect.
 - **FIFO Behavior**: This collection is ideal for scenarios where you need to process items in the order they arrive, such as scheduling tasks or managing a line of requests.
 - **Performance**: Operations like `Enqueue`, `Dequeue`, and `Peek` are generally very fast, with a time complexity of O(1).
 
-In modern C#, it's often preferable to use the generic `Queue<T>` from the `System.Collections.Generic` namespace for better type safety and performance. However, the non-generic `Queue` remains useful when you need to store objects of different types in the same collection.
+- In modern C#, it's often preferable to use the generic `Queue<T>` from the `System.Collections.Generic` namespace for better type safety and performance.
+- However, the non-generic `Queue` remains useful when you need to store objects of different types in the same collection.
+
