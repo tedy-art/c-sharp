@@ -7,7 +7,7 @@ public class LinqAggregation_SumCountAvgMethod
     static void Main(string[] args)
     {
         // Sum
-        int[] numbers = { 1, 2, 3, 4, 5, };
+        int[] numbers = { 1, 2, 3, 4, 5 };
         int sum = numbers.Sum();
         Console.WriteLine($"sum : {sum}");
 
@@ -15,7 +15,7 @@ public class LinqAggregation_SumCountAvgMethod
         int count = numbers.Count();
         Console.WriteLine($"count : {count}");
 
-        // Avrage
+        // Averages 
         double avg = numbers.Average();
         Console.WriteLine($"Average : {avg}");
 
