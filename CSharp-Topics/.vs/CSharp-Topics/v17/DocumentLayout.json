@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "E:\\C Sharp\\c-sharp\\CSharp-Topics\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\C Sharp\\c-sharp\\CSharp-Topics\\Enum\\2_create_enum_inside_class\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Enum\\2_create_enum_inside_class\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\C Sharp\\c-sharp\\CSharp-Topics\\LINQ\\3_LINQ_operators\\6_Aggregation_SumCountAverageMethod\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LINQ\\3_LINQ_operators\\6_Aggregation_SumCountAverageMethod\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\C Sharp\\c-sharp\\CSharp-Topics\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
@@ -24,13 +24,13 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "E:\\C Sharp\\c-sharp\\CSharp-Topics\\Enum\\2_create_enum_inside_class\\Program.cs",
-              "RelativeDocumentMoniker": "Enum\\2_create_enum_inside_class\\Program.cs",
-              "ToolTip": "E:\\C Sharp\\c-sharp\\CSharp-Topics\\Enum\\2_create_enum_inside_class\\Program.cs",
-              "RelativeToolTip": "Enum\\2_create_enum_inside_class\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAABAAAA",
+              "DocumentMoniker": "E:\\C Sharp\\c-sharp\\CSharp-Topics\\LINQ\\3_LINQ_operators\\6_Aggregation_SumCountAverageMethod\\Program.cs",
+              "RelativeDocumentMoniker": "LINQ\\3_LINQ_operators\\6_Aggregation_SumCountAverageMethod\\Program.cs",
+              "ToolTip": "E:\\C Sharp\\c-sharp\\CSharp-Topics\\LINQ\\3_LINQ_operators\\6_Aggregation_SumCountAverageMethod\\Program.cs",
+              "RelativeToolTip": "LINQ\\3_LINQ_operators\\6_Aggregation_SumCountAverageMethod\\Program.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAABUAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-14T08:22:08.94Z",
+              "WhenOpened": "2024-08-17T13:03:38.796Z",
               "EditorCaption": ""
             },
             {
@@ -41,7 +41,7 @@
               "RelativeDocumentMoniker": "README.md",
               "ToolTip": "E:\\C Sharp\\c-sharp\\CSharp-Topics\\README.md",
               "RelativeToolTip": "README.md",
-              "ViewState": "AQIAAIAPAAAAAAAAAAAAAI8PAAAPAAAA",
+              "ViewState": "AQIAAIQRAAAAAAAAAAAswJwRAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
               "WhenOpened": "2024-07-27T13:59:14.105Z",
               "EditorCaption": ""

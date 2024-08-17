@@ -4141,9 +4141,395 @@ Medium level
 ```
 
 
-# 12. LINQ Basics
-- Introduction to LINQ
-- basic queries
-- filtering
-- ordering
 
+# 12. LINQ Basics
+
+### 1. **What is LINQ?**
+**Definition**:
+- LINQ (Language Integrated Query) is a query syntax integrated into C# and VB.NET for querying various data sources, including collections, databases, and XML.
+- LINQ simplifies querying data from various sources using a uniform syntax across different data types, such as collections, databases, XML, etc. 
+- LINQ is integrated into C# and VB.NET, and it allows developers to work with data more efficiently and readably.
+
+**Key Benefits of LINQ:**
+- **Unified Querying**: Whether querying databases, collections, or XML, the same LINQ syntax can be used.
+- **Type Checking**: Errors can be caught at compile time, thanks to strong typing.
+- **IntelliSense Support**: LINQ provides IntelliSense support, making coding easier and faster.
+- **Code Readability**: LINQ queries often result in more concise and readable code compared to traditional loops and conditions.
+
+---
+
+### **2. LINQ Query Syntax**
+
+- LINQ Query Syntax is the SQL-like, declarative way of writing queries in C#. 
+- It uses keywords similar to SQL to select, filter, group, and sort data. 
+
+Syntax
+```csharp
+        var evenNumbers = from num in numbers
+                          where num % 2 == 0
+                          select num;
+```
+
+**Example: Query Syntax**
+```csharp
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+class LINQQuerySyntaxExample
+{
+    static void Main()
+    {
+        List<int> numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+        var evenNumbers = from num in numbers
+                          where num % 2 == 0
+                          select num;
+
+        Console.WriteLine("Even numbers:");
+        foreach (var num in evenNumbers)
+        {
+            Console.WriteLine(num);
+        }
+    }
+}
+```
+Output:
+```
+Even numbers :
+2
+4
+6
+8
+10
+```
+
+
+
+**Explanation**:
+- **from**: Specifies the data source (`numbers` list).
+- **where**: Applies a condition (`num % 2 == 0` to select even numbers).
+- **select**: Specifies what to return (in this case, the even numbers).
+
+---
+
+### **3. LINQ Method Syntax**
+
+- LINQ Method Syntax uses method chaining and lambda expressions to query data.
+- This is a more functional approach and is often preferred for its conciseness.
+
+Syntax
+```csharp
+        var evenNumbers = numbers.Where(num => num % 2 == 0);
+```
+
+**Example: Method Syntax**
+```csharp
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+class LINQMethodSyntaxExample
+{
+    static void Main()
+    {
+        List<int> numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+        var evenNumbers = numbers.Where(num => num % 2 == 0);
+
+        Console.WriteLine("Even numbers:");
+        foreach (var num in evenNumbers)
+        {
+            Console.WriteLine(num);
+        }
+    }
+}
+```
+Output:
+```
+Even numbers :
+2
+4
+6
+8
+10
+```
+**Explanation**:
+- **Where**: Filters the list for even numbers using a lambda expression (`num => num % 2 == 0`).
+
+
+## LINQ operators:
+- LINQ operators are method that allow you to perform various operations like filtering, Sorting, projecting, Grouping and joining data.
+
+### 1. **Filtering: `Where()`**
+
+- The `Where()` method is one of the most commonly used LINQ operators.
+- It is used to filter a collection based on a condition.
+- The condition is specified as a predicate (a delegate that returns a boolean).
+
+#### Example:
+
+```csharp
+int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+var evenNumbers = numbers.Where(n => n % 2 == 0);
+
+foreach (var num in evenNumbers)
+{
+    Console.WriteLine(num);
+}
+```
+
+### 2. **Sorting: `OrderBy()` and `ThenBy()`**
+
+- **`OrderBy()`**: Sorts the elements in ascending order based on a key.
+- **`OrderByDescending()`**: Sorts the elements in descending order.
+- **`ThenBy()`**: Used to specify a secondary sorting criterion.
+
+#### Example:
+
+```csharp
+string[] names = { "John", "Anna", "Kyle", "Michael", "Zara" };
+
+var sortedNames = names.OrderBy(n => n);
+
+foreach (var name in sortedNames)
+{
+    Console.WriteLine(name);
+}
+```
+
+
+#### Example with `ThenBy()`:
+
+```csharp
+var students = new List<Student>
+{
+    new Student { Name = "John", Age = 18 },
+    new Student { Name = "Anna", Age = 20 },
+    new Student { Name = "Kyle", Age = 20 }
+};
+
+var sortedStudents = students.OrderBy(s => s.Age).ThenBy(s => s.Name);
+
+foreach (var student in sortedStudents)
+{
+    Console.WriteLine($"{student.Name} - {student.Age}");
+}
+```
+
+
+### 3. **Projection: `Select()`**
+
+- The `Select()` operator is used to project elements from a collection into a new form.
+- You can use `Select()` to transform or select specific properties from the elements in a collection.
+
+#### Example:
+
+```csharp
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+public class Student
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+}
+
+public class LinqSorting_selectMethod
+{
+    static void Main(string[] args)
+    {
+        var students = new List<Student>()
+        {
+            new Student { Name = "John", Age = 18},
+            new Student { Name = "Anna", Age = 20}
+        };
+
+        Console.WriteLine("Student name Collections : ");
+        var StudentNames = students.Select( s => s.Name);
+
+        foreach (var name in StudentNames)
+        {
+            Console.WriteLine(name);
+        }
+
+        Console.WriteLine("Student Age Collection : ");
+        var StudentAge = students.Select(a => a.Age);
+
+        foreach (var age in StudentAge)
+        {
+            Console.WriteLine(age);
+        }
+        Console.ReadLine();
+    }
+}
+```
+Output:
+```
+Student name Collections :
+John
+Anna
+Student Age Collection :
+18
+20
+```
+
+
+### 4. **Grouping: `GroupBy()`**
+
+- The `GroupBy()` operator groups elements in a collection based on a key.
+- The result is a collection of groups, where each group contains the elements that share the same key.
+
+#### Example:
+
+```csharp
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+public class Student
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+}
+
+public class LinqGrouping_GroupByMethod
+{
+    static void Main(string[] args)
+    {
+        var students = new List<Student>
+        {
+            new Student { Name = "John", Age = 18},
+            new Student { Name = "Anna", Age = 20},
+            new Student { Name = "Kyle", Age = 18}
+        };
+
+        var groupedStudent = students.GroupBy(s => s.Age);
+
+        foreach (var group in groupedStudent)
+        {
+            Console.WriteLine($"Age Grouped : {group.Key}");
+            foreach (var student in group)
+            {
+                Console.WriteLine(student.Name);
+            }
+        }
+    }
+}
+```
+Output:
+```
+Age Grouped : 18
+John
+Kyle
+Age Grouped : 20
+Anna
+```
+
+### 5. **Joining: `Join()`**
+
+- The `Join()` operator performs inner joins between two collections based on a common key.
+- This is similar to SQL joins and allows you to combine data from two different collections.
+
+#### Example:
+
+```csharp
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+public class Student
+{ 
+    public int Id { get; set; }
+    public string Name { get; set; }
+}
+
+public class Enrollment
+{
+    public int StudentId { get; set; }
+    public string Course { get; set; }
+}
+
+public class LinqJoining_JoinMethod
+{
+    static void Main(string[] args)
+    {
+        var students = new List<Student>
+        {
+            new Student { Id = 1, Name = "John"},
+            new Student { Id = 2, Name = "Anna"}
+        };
+
+        var enrollments = new List<Enrollment>
+        {
+            new Enrollment { StudentId = 1, Course = "Math" },
+            new Enrollment { StudentId = 2, Course = "Science"}
+        };
+
+        var studentEnrollments = students.Join(
+            enrollments,
+            student => student.Id,
+            enrollment => enrollment.StudentId,
+            (student, enrollment) => new { student.Name, enrollment.Course}
+        );
+
+        foreach ( var se in studentEnrollments )
+        {
+            Console.WriteLine($"{se.Name} is enrolled in {se.Course}.");
+        }
+        Console.ReadLine();
+    }
+}
+```
+Output:
+```
+John is enrolled in Math.
+Anna is enrolled in Science.
+```
+In this example, `Join()` combines the `students` and `enrollments` collections based on the `Id` and `StudentId` properties.
+
+### 6. **Aggregation: `Sum()`, `Count()`, `Average()`**
+
+LINQ provides several aggregation operators that allow you to perform calculations on collections.
+
+- **`Sum()`**: Calculates the sum of a collection.
+- **`Count()`**: Returns the number of elements in a collection.
+- **`Average()`**: Calculates the average of a collection.
+
+#### Example with `Sum()`:
+
+```csharp
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+public class LinqAggregation_SumCountAvgMethod
+{
+    static void Main(string[] args)
+    {
+        // Sum
+        int[] numbers = { 1, 2, 3, 4, 5, };
+        int sum = numbers.Sum();
+        Console.WriteLine($"sum : {sum}");
+
+        // Count
+        int count = numbers.Count();
+        Console.WriteLine($"count : {count}");
+
+        // Avrage
+        double avg = numbers.Average();
+        Console.WriteLine($"Average : {avg}");
+
+        Console.ReadLine();
+    }
+}
+```
+
+Output:
+```
+sum : 15
+count : 5
+Average : 3
+```
