@@ -4534,9 +4534,10 @@ count : 5
 Average : 3
 ```
 
-## Deferred Execution and 
+## Deferred Execution and Immediate Execution
 ### 1. Deferred Execution
-Deferred execution means that the query is not executed when it is defined but rather when it is iterated over (e.g., when calling methods like ToList(), ToArray(), foreach, etc.). This allows LINQ to optimize the query and fetch the data only when it is truly needed.
+- Deferred execution means that the query is not executed when it is defined but rather when it is iterated over (e.g., when calling methods like `ToList()`, `ToArray()`, `foreach`, etc.).
+- This allows LINQ to optimize the query and fetch the data only when it is truly needed.
 
 Example of Deferred Execution:
 ```csharp
@@ -4573,7 +4574,7 @@ public class Program
 - Data is Evaluated Upon Iteration: When we iterate over evenNumbersQuery using foreach, the query is executed at that moment, fetching the latest data from the numbers list (including the newly added 6).
 - Efficiency: Deferred execution can be more efficient as it allows for query optimizations and avoids unnecessary data fetching.
 
-### 2. Immediate Execution**
+### 2. Immediate Execution
 - Immediate execution in LINQ refers to the concept where a query is executed as soon as it is defined, and the result is immediately evaluated and stored in memory.
 - Unlike deferred execution, where the query is only executed when it is iterated over or accessed, immediate execution triggers the query to run right away, often resulting in a collection or value that is ready for immediate use.
 
