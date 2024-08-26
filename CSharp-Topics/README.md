@@ -4742,5 +4742,6 @@ Sara, Salary: 65000
 Paul, Salary: 52000
 
 Average Salary: 60400
+
 ```
 
